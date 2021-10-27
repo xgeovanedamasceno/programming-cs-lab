@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ContactPage from './ContactPage';
+
+import Header from './Header';
+import HomePage from './HomePage';
+import NotFound from './NotFound';
+import ProductSinglePage from './ProductSinglePage';
+import ProductsPage from './ProductsPage';
+
 
 function App() {
+  
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Header title="React Lab - Fetch API Origamid"/>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="products-page" element={<ProductsPage />}/>
+      <Route path="products-page/:id" element={<ProductSinglePage />} />
+      <Route path="contact-page" element={<ContactPage />}/>
+      <Route path="*" element={<NotFound />}/>
+     </Routes> 
+    </BrowserRouter>
   );
 }
 
