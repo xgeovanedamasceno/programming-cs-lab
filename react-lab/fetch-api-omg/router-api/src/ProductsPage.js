@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Head from './Head';
 
 const ProductsPage = () => {
 
@@ -17,6 +18,7 @@ const ProductsPage = () => {
 
     return (
         <section>
+            <Head title="Products" description="This is a product page"/>
            <ul style={{width: '700px', display: 'flex', flexWrap: 'wrap'}}>
                {products.map(product => (
                    <Link to={product.id} key={product.id}  style={{flex: '2 1 auto', textDecoration: 'none', color: '#444'}}>

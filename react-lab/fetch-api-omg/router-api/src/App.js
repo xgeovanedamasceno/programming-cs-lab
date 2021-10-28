@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ContactPage from './ContactPage';
 
+
 import Header from './Header';
 import HomePage from './HomePage';
 import NotFound from './NotFound';
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <BrowserRouter>
+  
     <Header title="React Lab - Fetch API Origamid"/>
     <Routes>
       <Route path="/" element={<HomePage />} />
