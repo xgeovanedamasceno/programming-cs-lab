@@ -5,6 +5,7 @@ import ContactPage from './ContactPage';
 
 import Header from './Header';
 import HomePage from './HomePage';
+import Navbar from './Navbar';
 import NotFound from './NotFound';
 import ProductSinglePage from './ProductSinglePage';
 import ProductsPage from './ProductsPage';
@@ -18,6 +19,7 @@ function App() {
     <BrowserRouter>
   
     <Header title="React Lab - Fetch API Origamid"/>
+    <Navbar />
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="products-page" element={<ProductsPage />}/>
