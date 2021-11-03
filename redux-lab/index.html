@@ -9,14 +9,30 @@
 </head>
 <body>
     <script>
+        // constants
+        const INCREMENT = 'INCREMENT'
+        const SUM = 'SUM'
+        const SUB = 'SUB'
         const initialState = 10;
 
-        function reducer(state = initialState, action) {
-            if (action.type === 'somar') {
-                return state + action.payload
-            } else return state;
+        // Action Creators
+        function increment() {
+            return { type: INCREMENT }
+        }
 
-            console.log(action)
+        function sum() {
+            return { type: SUM }
+        }
+
+        function sub() {
+            return { type: SUB }
+        }
+
+        
+        function reducer(state = initialState, action) {
+            if (action.type === SUM) return state + action.payload
+            if (action.type === SUB) return state - action.payload
+            if (action.type === INCREMENT) return state + 1;
             return state;
         }
 
@@ -24,10 +40,10 @@
         let state = store.getState();
         console.log(state)
 
-        store.dispatch({type: 'somar', payload: 10})
-        store.dispatch({type: 'somar', payload: 10})
-        store.dispatch({type: 'somar', payload: 10})
-        store.dispatch({type: 'somar', payload: 10})
+        store.dispatch({type: SUM , payload: 10})
+        store.dispatch({type: SUM , payload: 10})
+        store.dispatch({type: SUB , payload: 10})
+        store.dispatch({ type: INCREMENT })
 
         state = store.getState();
 
