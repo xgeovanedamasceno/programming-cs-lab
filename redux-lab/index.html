@@ -8,6 +8,10 @@
     <script src="./redux.min.js"></script>
 </head>
 <body>
+    <div>
+        <h1>Total: <span id="total"></span></h1>
+        <button id="btn-action">Action</button>
+    </div>
     <script>
         // constants
         const INCREMENT = 'INCREMENT'
@@ -38,16 +42,28 @@
 
         const store = Redux.createStore(reducer);
         let state = store.getState();
-        console.log(state)
+   
 
-        store.dispatch(sum(10))
+        function render() {
+            let state = store.getState();
+            const total = document.getElementById('total');
+            total.innerText = state;
+        }
+        render();
+        
+
+        const unsubscribe = store.subscribe(render)
+        store.dispatch(sum(100))
+        unsubscribe();
+
+        const button = document.getElementById('btn-action')
+        button.addEventListener('click', () => store.dispatch(increment()));
+        
+        
+        /* store.dispatch(sum(10))
         store.dispatch(sum(10))
         store.dispatch(sub(10))
-        store.dispatch(increment())
-
-        state = store.getState();
-
-        console.log(state)
+        store.dispatch(increment()) */
         
 
     </script>
