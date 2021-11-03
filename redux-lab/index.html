@@ -20,12 +20,12 @@
             return { type: INCREMENT }
         }
 
-        function sum() {
-            return { type: SUM }
+        function sum(payload) {
+            return { type: SUM, payload }
         }
 
-        function sub() {
-            return { type: SUB }
+        function sub(payload) {
+            return { type: SUB, payload }
         }
 
         
@@ -40,10 +40,10 @@
         let state = store.getState();
         console.log(state)
 
-        store.dispatch({type: SUM , payload: 10})
-        store.dispatch({type: SUM , payload: 10})
-        store.dispatch({type: SUB , payload: 10})
-        store.dispatch({ type: INCREMENT })
+        store.dispatch(sum(10))
+        store.dispatch(sum(10))
+        store.dispatch(sub(10))
+        store.dispatch(increment())
 
         state = store.getState();
 
