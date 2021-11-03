@@ -9,15 +9,31 @@
 </head>
 <body>
     <script>
-        function reducer() {
-            return {
-                name: 'Geovane',
-                age: 29
-            }
+        const initialState = 10;
+
+        function reducer(state = initialState, action) {
+            if (action.type === 'somar') {
+                return state + action.payload
+            } else return state;
+
+            console.log(action)
+            return state;
         }
+
         const store = Redux.createStore(reducer);
-        console.log(store)
-        console.log(store.getState())
+        let state = store.getState();
+        console.log(state)
+
+        store.dispatch({type: 'somar', payload: 10})
+        store.dispatch({type: 'somar', payload: 10})
+        store.dispatch({type: 'somar', payload: 10})
+        store.dispatch({type: 'somar', payload: 10})
+
+        state = store.getState();
+
+        console.log(state)
+        
+
     </script>
 </body>
 </html>
