@@ -3,15 +3,15 @@ const initialState = {
     age: 29,
 }
 
-const reducer = (state = initialState, action) => {
+const reducer = immer.produce((state, action) => {
     switch (action.type) {
         case 'CHANGE_NAME':
-            return { ...state, name: action.payload};
-        default:
-            return state;
-
+            state.name = action.payload;
+            break;
+        case 'CHANGE_AGE':
+            state.age = action.payload;
     }
-}
+}, initialState);
 
 const store = Redux.createStore(reducer, 
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
@@ -19,3 +19,5 @@ const store = Redux.createStore(reducer,
 store.dispatch( { type: 'CHANGE_NAME', payload: 'Charles'})
 store.dispatch( { type: 'CHANGE_NAME', payload: 'Peter'})
 store.dispatch( { type: 'CHANGE_NAME', payload: 'Xavier'})
+store.dispatch( { type: 'CHANGE_AGE', payload: 31})
+
