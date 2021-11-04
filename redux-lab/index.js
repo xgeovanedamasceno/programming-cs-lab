@@ -38,13 +38,13 @@
 
  const reducer = Redux.combineReducers({myCalc, modal})
 
- const store = Redux.createStore(reducer);
+ const store = Redux.createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
  let state = store.getState();
 
 
  function render() {
      let { myCalc, modal} = store.getState();
-     console.log(state)
+     
      const total = document.getElementById('total');
      total.innerText = myCalc;
 
@@ -68,7 +68,7 @@
  closeButton.addEventListener('click', () => store.dispatch({ type: 'CLOSE' }))
 
  
- /* store.dispatch(sum(10))
+ store.dispatch(sum(10))
  store.dispatch(sum(10))
  store.dispatch(sub(10))
- store.dispatch(increment()) */
+ store.dispatch(increment())
