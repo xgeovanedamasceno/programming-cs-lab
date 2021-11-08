@@ -6,7 +6,7 @@ const MODIFY_EMAIL = 'student/MODIFY_EMAIL';
 // Action Creator
 export const incrementTime = () => ({ type: INCREMENT_TIME });
 export const decrementTime = () => ({ type: DECREMENT_TIME });
-export const modifyEmail = () => ({ type: MODIFY_EMAIL });
+export const modifyEmail = (payload) => ({ type: MODIFY_EMAIL, payload });
 
 
 // Initial State
@@ -17,14 +17,16 @@ const student = {
   };
 
 const reducer = immer.produce((state, action) => {
+    console.log(action.type)
     switch(action.type) {
         case INCREMENT_TIME:
-            state.remainingDays = action.payload;
+            state.remainingDays += 1;
             break;
         case DECREMENT_TIME:
-            state.remainingDays = action.payload;
+            state.remainingDays -= 1;
             break;
         case MODIFY_EMAIL:
+            console.log(action.payload)
             state.email = action.payload;
             break;
     }
