@@ -5,17 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redux</title>
-    <script src="immer.umd.production.min.js"></script>
+    <script src="./immer.umd.production.min.js"></script>
     <script src="./redux.min.js"></script>
 </head>
 <body>
     <div>
-<!--         <h1>Total: <span id="total"></span></h1>
-        <button id="btn-action">Action</button>
-        <button id="open">Open Modal</button>
-        <button id="close">Close Modal</button> -->
+        <h1>Student - Settings Account</h1>
+        <section>
+            <h2>Profile</h2>
+            <Label>
+                Name:
+                <input type="text" id="name">
+            </Label>
+            <br>
+            <br>
+            <label>
+                Email:
+                <input type="email" name="email" id="email">
+            </label>
+            <button>Edit email</button>
+            <p id="days-info">Remaining Days:</p>
+            <button>Add one day</button>
+            <button>Remove one day</button>
 
+        </section>
     </div>
-    <script type="module" src="./immutability.js"></script>
+    <script type="module" src="/b-first-challenge/index.js"></script>
 </body>
 </html>
