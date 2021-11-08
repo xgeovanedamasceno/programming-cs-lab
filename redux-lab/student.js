@@ -4,8 +4,8 @@ const TIME_DECREMENT = 'student/TIME_DECREMENT';
 const MOD_EMAIL = 'student/MODIFY_EMAIL';
 
 // Action Creator
-export const increment = () => ({ type: TIME_INCREMENT });
-export const decrement = () => ({ type: TIME_DECREMENT });
+export const incrementTime = () => ({ type: TIME_INCREMENT });
+export const decrementTime = () => ({ type: TIME_DECREMENT });
 export const modifyEmail = () => ({ type: MOD_EMAIL });
 
 
