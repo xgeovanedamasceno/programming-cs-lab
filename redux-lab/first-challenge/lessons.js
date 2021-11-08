@@ -6,7 +6,7 @@ export const completeClass =  () => ({ type: COMPLET_CLASS });
 export const completeCourse =  () => ({ type: COMPLET_COURSE });
 export const resetCourse = () => ( { type: RESET_COURSE });
 
-const classes = [
+const lessons = [
     {
       id: 1,
       name: 'Design',
@@ -30,7 +30,7 @@ const classes = [
   ];
   
 
-const reducerClasses = (state = classes, action) => {
+const reducerLessons = (state = lessons, action) => {
     switch(action.type) {
         case COMPLET_CLASS:
             state.class = action.payload;
@@ -46,4 +46,4 @@ const reducerClasses = (state = classes, action) => {
     }
 }
 
-export default reducerClasses;
+export default reducerLessons;
