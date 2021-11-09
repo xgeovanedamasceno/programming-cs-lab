@@ -1,5 +1,5 @@
 // Constants
-const INCREMENT_TIME = 'student/INCREMENT_TIME';
+const INCREMENT_TIME = 'student/INCREMENT_TIME'; //why?
 const DECREMENT_TIME = 'student/DECREMENT_TIME';
 const MODIFY_EMAIL = 'student/MODIFY_EMAIL';
 

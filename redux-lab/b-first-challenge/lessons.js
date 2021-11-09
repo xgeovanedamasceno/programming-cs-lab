@@ -1,12 +1,12 @@
-const COMPLET_CLASS = 'aulas/COMPLET_CLASS';
+const COMPLETE_LESSON = 'aulas/COMPLETE_LESSON';
 const COMPLET_COURSE = 'aulas/COMPLET_COURSE';
 const RESET_COURSE = 'aulas/RESET_COURSE';
 
-export const completeClass =  () => ({ type: COMPLET_CLASS });
+export const completeLesson =  (payload) => ({ type: COMPLETE_LESSON, payload });
 export const completeCourse =  () => ({ type: COMPLET_COURSE });
 export const resetCourse = () => ( { type: RESET_COURSE });
 
-const lessons = [
+export const lessons = [
     {
       id: 1,
       name: 'Design',
@@ -30,20 +30,32 @@ const lessons = [
   ];
   
 
-const reducerLessons = (state = lessons, action) => {
+const lessonsReducer = (state = lessons, action) => {
+    let newState;
     switch(action.type) {
-        case COMPLET_CLASS:
-            state.class = action.payload;
-            return state;
+        case COMPLETE_LESSON:
+          state.forEach(item => {
+            if (item.id === action.payload) {
+              item.complete = true;
+            }
+          })
+          newState = [...state];
+          return newState;
         case COMPLET_COURSE:
-            state.course = action.payload;
-            return state;
+          state.forEach(item => {
+            item.complete = true;
+          })
+          newState = [...state];
+          return newState;
         case RESET_COURSE:
-            state.course = action.payload;
-            return state;
+          state.forEach(item => {
+            item.complete = false;
+          })
+          newState = [...state];
+          return newState;
         default:
-            return state;
+          return state;
     }
 }
 
-export default reducerLessons;
+export default lessonsReducer;
