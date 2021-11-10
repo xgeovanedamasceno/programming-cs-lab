@@ -1,8 +1,6 @@
 const http = require('http');
 const status0S = require('./pcRamUse.js');
 
-
-
 const host = 'http://localhost';
 const port = 3000;
 
