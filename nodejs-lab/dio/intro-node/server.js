@@ -1,5 +1,8 @@
-const http = require('http');
+import { createServer } from 'http';
 
-http.createServer((req, res) => {
+const host = 'http://localhost';
+const port = 3000;
+
+createServer((req, res) => {
     res.end('<h1>Working</h1')
-}).listen('3000', () => console.log('Server is running'))
+}).listen(port, () => console.log(`Server is running at ${host}:${port}`))
