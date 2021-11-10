@@ -1,8 +1,16 @@
 /* Visit https://aka.ms/tsconfig.json to read more about this file */
 {
   "compilerOptions": {
-    "target": "es5",                                     
-    "module": "commonjs",                                
+    "target": "es2019",                         // version                                 
+    "module": "commonjs",
+    "moduleResolution": "node", 
+    "rootDir": "src",                           // main directory
+    "typeRoots": [                              // where it will find the typescript's definition files
+      "./src/@types",
+      "./node_modules/@types"
+    ],
+    "outDir": "./dist",                         // where it will send the code -> "build"
+    "removeComments": true,
     "esModuleInterop": true,                             
     "forceConsistentCasingInFileNames": true,            
     "strict": true,
