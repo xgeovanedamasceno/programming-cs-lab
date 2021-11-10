@@ -1,5 +1,4 @@
 /* Visit https://aka.ms/tsconfig.json to read more about this file */
-
 {
   "compilerOptions": {
     "target": "es5",                                     
@@ -7,6 +6,6 @@
     "esModuleInterop": true,                             
     "forceConsistentCasingInFileNames": true,            
     "strict": true,
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true                                
   }
 }
