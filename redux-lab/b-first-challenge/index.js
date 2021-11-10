@@ -3,13 +3,24 @@ import { lessons, completeLesson, completeCourse, resetCourse  } from "./lessons
 import store from "./configureStore.js";
 
 
+const ulElement = document.createElement('ul');
 
+const lessonsSection = document.getElementById('lessons')
 
+lessons.forEach(item => {
+    let liElement = document.createElement('li');
+    liElement.innerHTML = `
+        Lesson: ${item.name} - <span id=${item.id}>Status: ${item.complete ? 'complete' : 'incomplete'}</span> 
+        <button class=${item.id}>Complete Lesson</button><br><br>`
+    ulElement.appendChild(liElement);
+    
+})
+
+lessonsSection.appendChild(ulElement);
 
 
 function render() {
     const { student, lessons } = store.getState();
-    console.log(lessons)
     
     const nameField = document.getElementById('name')
     const emailField = document.getElementById('email')
@@ -17,12 +28,16 @@ function render() {
     nameField.value = student.name;
     emailField.value = student.email;
     daysInfo.innerHTML = 'Remaining Days: ' + student.remainingDays;
-
-
    
     const completeLessons = document.getElementById('total-lessons');
-    console.log(completeLessons)
 
+
+    lessons.forEach(lesson => {
+        let statusLesson = document.getElementById(`${lesson.id}`)
+        statusLesson.innerHTML = `Status: ${lesson.complete ? 'Complete' : 'Incomplete'}`        
+    })
+
+    
    
 
     
@@ -43,19 +58,11 @@ decrementButton.addEventListener('click', () => store.dispatch(decrementTime()))
 editButton.addEventListener('click', () => store.dispatch(modifyEmail(emailInput.value)))
 
 
-const ulElement = document.createElement('ul');
 
-const lessonsSection = document.getElementById('lessons')
-
-lessons.forEach(item => {
-    let liElement = document.createElement('li');
-    liElement.innerHTML = `
-        Lesson: ${item.name} - Status: ${item.complete ? 'complete' : 'incomplete'} 
-        <button id=${item.id}>Complete Lesson</button><br><br>`
-    ulElement.appendChild(liElement);
+let buttonsLessons = document.querySelectorAll('#lessons button')
+buttonsLessons = Array.from(buttonsLessons)
+buttonsLessons.forEach(btn => {
+    let id = parseInt(btn.getAttribute('class'))
+    btn.addEventListener('click', () => store.dispatch(completeLesson(id)))
 })
-
-lessonsSection.appendChild(ulElement);
-
-store.dispatch(completeLesson(2));
 

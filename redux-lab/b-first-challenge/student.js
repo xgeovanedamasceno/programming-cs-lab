@@ -17,7 +17,6 @@ const student = {
   };
 
 const reducer = immer.produce((state, action) => {
-    console.log(action.type)
     switch(action.type) {
         case INCREMENT_TIME:
             state.remainingDays += 1;
