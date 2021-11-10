@@ -29,17 +29,16 @@ function render() {
     emailField.value = student.email;
     daysInfo.innerHTML = 'Remaining Days: ' + student.remainingDays;
    
-    const completeLessons = document.getElementById('total-lessons');
-
+    let totalLessons = 0;
 
     lessons.forEach(lesson => {
         let statusLesson = document.getElementById(`${lesson.id}`)
         statusLesson.innerHTML = `Status: ${lesson.complete ? 'Complete' : 'Incomplete'}`        
+        if (lesson.complete) totalLessons += 1;
     })
 
-    
-   
-
+    const completeLessons = document.getElementById('total-lessons');
+    completeLessons.innerText = `Complete Lessons: ${totalLessons}`
     
 }
 
@@ -64,5 +63,14 @@ buttonsLessons = Array.from(buttonsLessons)
 buttonsLessons.forEach(btn => {
     let id = parseInt(btn.getAttribute('class'))
     btn.addEventListener('click', () => store.dispatch(completeLesson(id)))
+})
+
+
+document.getElementById('complete-all').addEventListener('click', () => {
+    store.dispatch(completeCourse());
+})
+
+document.getElementById('reset-all').addEventListener('click', () => {
+    store.dispatch(resetCourse());
 })
 
