@@ -1,0 +1,16 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "description": "rest style - ms auth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api-rest",
+    "auth",
+    "nodejs"
+  ],
+  "author": "xgeovanedamasceno",
+  "license": "ISC"
+}
