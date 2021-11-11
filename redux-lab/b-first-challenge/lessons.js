@@ -2,7 +2,7 @@ const COMPLETE_LESSON = 'aulas/COMPLETE_LESSON';
 const COMPLET_COURSE = 'aulas/COMPLET_COURSE';
 const RESET_COURSE = 'aulas/RESET_COURSE';
 
-export const completeLesson =  (payload) => ({ type: COMPLETE_LESSON, payload });
+export const completeLesson =  (id) => ({ type: COMPLETE_LESSON, payload: id });
 export const completeCourse =  () => ({ type: COMPLET_COURSE });
 export const resetCourse = () => ( { type: RESET_COURSE });
 
@@ -42,15 +42,11 @@ const lessonsReducer = (state = lessons, action) => {
           newState = [...state];
           return newState;
         case COMPLET_COURSE:
-          state.forEach(item => {
-            item.complete = true;
-          })
+          state.forEach( item => item.complete = true )
           newState = [...state];
           return newState;
         case RESET_COURSE:
-          state.forEach(item => {
-            item.complete = false;
-          })
+          state.forEach(item => item.complete = false )
           newState = [...state];
           return newState;
         default:

@@ -1,12 +1,12 @@
 // Constants
-const INCREMENT_TIME = 'student/INCREMENT_TIME'; //why?
+const INCREMENT_TIME = 'student/INCREMENT_TIME';
 const DECREMENT_TIME = 'student/DECREMENT_TIME';
 const MODIFY_EMAIL = 'student/MODIFY_EMAIL';
 
 // Action Creator
 export const incrementTime = () => ({ type: INCREMENT_TIME });
 export const decrementTime = () => ({ type: DECREMENT_TIME });
-export const modifyEmail = (payload) => ({ type: MODIFY_EMAIL, payload });
+export const modifyEmail = (email) => ({ type: MODIFY_EMAIL, payload: email });
 
 
 // Initial State
