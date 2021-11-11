@@ -58,8 +58,8 @@ editButton.addEventListener('click', () => store.dispatch(modifyEmail(emailInput
 
 
 
-let buttonsLessons = document.querySelectorAll('#lessons button')
-buttonsLessons = Array.from(buttonsLessons)
+let buttonsLessons = Array.from(document.querySelectorAll('#lessons button'))
+
 buttonsLessons.forEach(btn => {
     let id = parseInt(btn.getAttribute('class'))
     btn.addEventListener('click', () => store.dispatch(completeLesson(id)))
