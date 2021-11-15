@@ -1,10 +1,18 @@
+function getLocalStorage (key, initial) {
+    try {
+        return JSON.parse(window.localStorage.getItem(key))
+    } catch (error) {
+        return initial;
+    }
+}
+
 const initialState = {
     loading: false,
-    data: null,
+    data: getLocalStorage('data', null),
     error: null
 }
 
-function reducer(state = null, action) {
+function reducer(state = initialState, action) {
     switch (action.type) {
         case 'FETCH_STARTED':
             return { ...state, loading: true }
@@ -21,15 +29,23 @@ const thunk = (store) => (next) => (action) => {
     if (typeof action === 'function') {
         return action(store.dispatch, store.getState);
     }
-    console.log(action)
+    
     return next(action);
+}
+
+const localStoragez = (store) => (next) => (action) => {
+    const result = next(action)
+    if ( action.localStorage !== undefined ) {
+        window.localStorage.setItem(action.localStorage, JSON.stringify(action.payload))
+    }
+    return result;
 }
 
 
 
 const { applyMiddleware, compose } = Redux;
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const enhancer = composeEnhancers(applyMiddleware(thunk));
+const enhancer = composeEnhancers(applyMiddleware(thunk, localStoragez));
 const store = Redux.createStore(reducer, enhancer);
 
 function fetchUrl(url) {
@@ -37,15 +53,23 @@ function fetchUrl(url) {
         try {
             dispatch({ type: 'FETCH_STARTED' })
             const data = await fetch(url).then(r => r.json())
-            dispatch({ type: 'FETCH_SUCCESS', payload: data})
+            dispatch({ type: 'FETCH_SUCCESS', payload: data, localStorage: 'data'})
         } catch (error) {
             dispatch({ type: 'FETCH_ERROR', payload: error.message})
         }
     }
 }
-store.dispatch(fetchUrl('https://dogsapi.origamid.dev/json/api/photo'))
 
-/* fetchUrl(store.dispatch, 'https://dogsapi.origamid.dev/json/api/photo'); */
+const state = store.getState();
+
+
+if (state.data) {
+
+    store.dispatch(fetchUrl('https://dogsapi.origamid.dev/json/api/photo'))
+}
+
+
+
 
 
 
