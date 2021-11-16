@@ -32,7 +32,7 @@ const thunk = (store) => (next) => (action) => {
     return next(action)
 }
 
-const localStorage = (store) => (next) => (action) => {
+const localStoragez = (store) => (next) => (action) => {
     const result = next(action)
     if (action.localStorage !== undefined) {
         window.localStorage.setItem(action.localStorage, JSON.stringify(action.payload))
@@ -43,7 +43,7 @@ const localStorage = (store) => (next) => (action) => {
 const { compose, applyMiddleware } = Redux;
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const enhancer = composeEnhancers(applyMiddleware(thunk, localStorage));
+const enhancer = composeEnhancers(applyMiddleware(thunk, localStoragez));
 
 const store = Redux.createStore(reducer, enhancer);
 
@@ -63,7 +63,6 @@ function fetchUrl(url) {
 const state = store.getState();
 
 if( state.data === null ) {
-
     store.dispatch(fetchUrl('https://dogsapi.origamid.dev/json/api/photo'));
 }
 
