@@ -3,6 +3,12 @@ const FETCH_STARTED = 'token/FETCH_STARTED';
 const FETCH_SUCCESS = 'token/FETCH_SUCCESS';
 const FETCH_ERROR =  'token/FETCH_ERROR';
 
+
+//Action Creators
+const startFetch = () => ({ type: FETCH_STARTED });
+const successFetch = (token) => ({type: FETCH_SUCCESS, payload: token });
+const errorFetch = () => ({ type: FETCH_ERROR });
+
 //Initial State
 const initialState = {
     loading: false,
@@ -11,7 +17,6 @@ const initialState = {
 }
 
 const reducer = immer.produce((state, action) => {
-    console.log(action.type)
     switch(action.type) {
         case FETCH_STARTED:
             state.loading = true;
@@ -46,13 +51,9 @@ const reducer = immer.produce((state, action) => {
 
 
 const thunk = (store) => (next) => (action) => {
-    console.log(store.getState());
-    console.log(typeof action)
-    
-    if (typeof action === 'function')  {
-        console.log('if')
-        return action(store.dispatch)
-    }
+     
+    if (typeof action === 'function') return action(store.dispatch)
+
     return next(action);
 }
 
@@ -67,17 +68,12 @@ const store = Redux.createStore(reducer, enhancer);
 
 
 
-const url = 'https://dogsapi.origamid.dev/json/jwt-auth/v1/token';
-const user = {
-    username: 'dog',
-    password: 'dog'
-}
+
 
 export function postFetch(url, user) {
    return async (dispatch) => {
        try {
-        console.log('postFetch try');
-           dispatch({type: FETCH_STARTED })
+           dispatch(startFetch())
            const response = await fetch(
             url,
             {
@@ -89,14 +85,22 @@ export function postFetch(url, user) {
             },
           );
           const { token } = await response.json();
-         dispatch({ type: FETCH_SUCCESS, payload: token});
+         dispatch(successFetch(token));
        } catch (error) {
            console.log('postFetch try');
-           dispatch({ type: FETCH_ERROR, payload: error.message })
+           dispatch(errorFetch())
        }
    }
     
 }
 
-store.dispatch(postFetch(url, user))
+const url = 'https://dogsapi.origamid.dev/json/jwt-auth/v1/token';
+const user = {
+    username: 'dog',
+    password: 'dog'
+}
+const urlUser = 'https://dogsapi.origamid.dev/json/api/user';
 
+const state = store.getState();
+if ( state.token === null ) store.dispatch(postFetch(url, user))
+else store.dispatch(fetchUser(urlUser))
