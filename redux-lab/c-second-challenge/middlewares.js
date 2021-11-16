@@ -1,6 +1,6 @@
 export const thunk = (store) => (next) => (action) => {
     if (typeof action === 'function') {
-        console.log(store.dispatch)
+        console.log(store.getState)
         return action(store.dispatch)
     } 
 

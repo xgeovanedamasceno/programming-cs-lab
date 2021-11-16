@@ -7,9 +7,9 @@ const FETCH_ERROR =  'token/FETCH_ERROR';
 
 
 //Action Creators
-export const startFetch = () => ({ type: FETCH_STARTED });
-export const successFetch = (token) => ({type: FETCH_SUCCESS, payload: token, localStorage: 'token' });
-export const errorFetch = () => ({ type: FETCH_ERROR });
+const startFetch = () => ({ type: FETCH_STARTED });
+const successFetch = (token) => ({type: FETCH_SUCCESS, payload: token, localStorage: 'token' });
+const errorFetch = () => ({ type: FETCH_ERROR });
 
 //Initial State
 const initialState = {

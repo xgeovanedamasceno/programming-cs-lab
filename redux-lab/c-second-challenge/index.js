@@ -18,7 +18,8 @@ document.querySelector('#do-fetch').addEventListener('click', () => {
     
     if (token.token === null) {
         store.dispatch(createUser(url, userData));
-        store.dispatch(getUser(urlUser, token));
+        console.log(token.token)
+        store.dispatch(getUser(urlUser, token.token));
     } else {
         store.dispatch(getUser(urlUser));
 
