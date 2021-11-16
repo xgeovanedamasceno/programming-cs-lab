@@ -1,7 +1,9 @@
+//Constants
 const FETCH_STARTED = 'token/FETCH_STARTED';
 const FETCH_SUCCESS = 'token/FETCH_SUCCESS';
 const FETCH_ERROR =  'token/FETCH_ERROR';
 
+//Initial State
 const initialState = {
     loading: false,
     token: null,
@@ -22,6 +24,7 @@ const reducer = immer.produce((state, action) => {
             break;
     }
 }, initialState);
+
 
 
 // code without immer
@@ -57,13 +60,14 @@ const enhancer = composeEnhancers(applyMiddleware(thunk));
 
 const store = Redux.createStore(reducer, enhancer);
 
+
 const url = 'https://dogsapi.origamid.dev/json/jwt-auth/v1/token';
 const user = {
     username: 'dog',
     password: 'dog'
 }
 
-function postFetch(url, user) {
+export function postFetch(url, user) {
    return async (dispatch) => {
        try {
         console.log('postFetch try');
