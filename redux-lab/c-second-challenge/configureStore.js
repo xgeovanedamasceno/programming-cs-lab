@@ -1,6 +1,7 @@
-import token from './token.js'
+import token from './token.js';
+import user from './user.js'
 
-const reducer = Redux.combineReducers({token})
+const reducer = Redux.combineReducers({ token, user })
 
 const thunk = (store) => (next) => (action) => {
      
