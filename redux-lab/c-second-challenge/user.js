@@ -1,3 +1,5 @@
+import getLocalStorage from "./getLocalStorage.js";
+
 const FETCH_STARTED = 'user/FETCH_STARTED';
 const FETCH_SUCCESS = 'user/FETCH_SUCCESS';
 const FETCH_ERROR = 'user/FETCH_ERROR';
@@ -10,6 +12,30 @@ const initialState = {
     loading: false,
     data: null,
     error: null
+}
+
+const token = getLocalStorage('token', null);
+console.log(token);
+
+export function getUser(url) {
+    return async (dispatch) => {
+        try {
+            dispatch(startFetch());
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    Authorization: 'Bearer ' + token,
+                },
+            });
+            const data = await response.json();
+            
+            if(data.status !== 200) {
+
+            }
+        } catch (error) {
+            dispatch(errorFetch(error.message))
+        }
+    }
 }
 
 const reducer = immer.produce((state, action) => {
