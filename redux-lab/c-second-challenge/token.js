@@ -92,5 +92,5 @@ export function postFetch(url, user) {
     
 }
 
-store.dispatch(postFetch(url, user))
+/* store.dispatch(postFetch(url, user)) */
 
