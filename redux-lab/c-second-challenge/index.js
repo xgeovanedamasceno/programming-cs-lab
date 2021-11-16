@@ -1,4 +1,4 @@
-import { createUser } from './token.js'
+import { postUser } from './token.js'
 import store from './configureStore.js';
 import { getUser } from './user.js';
 import getLocalStorage from './getLocalStorage.js';
@@ -12,16 +12,22 @@ const userData = {
 
 const urlUser = 'https://dogsapi.origamid.dev/json/api/user';
 
-document.querySelector('#do-fetch').addEventListener('click', () => {
+document.querySelector('#do-fetch').addEventListener('click', async () => {
     
-    const { token } = store.getState();
+    let { token } = store.getState();
     
-    if (token.token === null) {
-        store.dispatch(createUser(url, userData));
-        store.dispatch(getUser(urlUser, token));
-    } else {
-        store.dispatch(getUser(urlUser));
+    if (token.data === null) {
+        /* store.dispatch(getUser(urlUser, await postUser(url, userData))) */
 
+        await store.dispatch(postUser(url, userData)); //espera resolver para depois ir para a próxima linha
+        let { token } = store.getState();
+        console.log(token.data)
+        store.dispatch(getUser(urlUser, token.data))
+    } else {
+        let { token } = store.getState()
+        
+        store.dispatch(getUser(urlUser, token.data))
     }
+    
     
 })

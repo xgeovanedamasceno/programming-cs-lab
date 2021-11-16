@@ -7,18 +7,18 @@ const FETCH_ERROR =  'token/FETCH_ERROR';
 
 
 //Action Creators
-export const startFetch = () => ({ type: FETCH_STARTED });
-export const successFetch = (token) => ({type: FETCH_SUCCESS, payload: token, localStorage: 'token' });
-export const errorFetch = () => ({ type: FETCH_ERROR });
+const startFetch = () => ({ type: FETCH_STARTED });
+const successFetch = (token) => ({type: FETCH_SUCCESS, payload: token, localStorage: 'token' });
+const errorFetch = () => ({ type: FETCH_ERROR });
 
 //Initial State
 const initialState = {
     loading: false,
-    token: getLocalStorage('token', null),
+    data: getLocalStorage('token', null),
     error: null
 }
 
-export function createUser(url, user) {
+export function postUser(url, user) {
    return async (dispatch) => {
        try {
            dispatch(startFetch())
@@ -34,8 +34,6 @@ export function createUser(url, user) {
           );
           const { token } = await response.json();
          dispatch(successFetch(token));
-         console.log(token)
-         return token;
        } catch (error) {
            console.log('postFetch try');
            dispatch(errorFetch(error.message))
@@ -51,7 +49,7 @@ const reducer = immer.produce((state, action) => {
             break;
         case FETCH_SUCCESS:
             state.loading = false;
-            state.token = action.payload;
+            state.data = action.payload;
             break;
         case FETCH_ERROR:
             state.error = action.payload;

@@ -3,14 +3,11 @@ import token from './token.js';
 import user from './user.js'
 
 
-const { compose, applyMiddleware } = Redux;
+const { compose, applyMiddleware, combineReducers, createStore  } = Redux;
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
 const enhancer = composeEnhancers(applyMiddleware(thunk, localStorage));
-
-const reducer = Redux.combineReducers({ token, user })
-
-const store = Redux.createStore(reducer, enhancer);
+const reducer = combineReducers({ token, user })
+const store = createStore(reducer, enhancer);
 
 export default store;
