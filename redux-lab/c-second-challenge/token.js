@@ -62,7 +62,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const enhancer = composeEnhancers(applyMiddleware(thunk));
 
-export const store = Redux.createStore(reducer, enhancer);
+const store = Redux.createStore(reducer, enhancer);
 
 
 
@@ -98,5 +98,5 @@ export function postFetch(url, user) {
     
 }
 
-/* store.dispatch(postFetch(url, user)) */
+store.dispatch(postFetch(url, user))
 
