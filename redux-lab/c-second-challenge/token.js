@@ -47,8 +47,12 @@ const reducer = immer.produce((state, action) => {
 
 const thunk = (store) => (next) => (action) => {
     console.log(store.getState());
+    console.log(typeof action)
     
-    if (typeof action === 'function') return action(store.dispatch)
+    if (typeof action === 'function')  {
+        console.log('if')
+        return action(store.dispatch)
+    }
     return next(action);
 }
 
@@ -58,7 +62,9 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const enhancer = composeEnhancers(applyMiddleware(thunk));
 
-const store = Redux.createStore(reducer, enhancer);
+export const store = Redux.createStore(reducer, enhancer);
+
+
 
 
 const url = 'https://dogsapi.origamid.dev/json/jwt-auth/v1/token';
