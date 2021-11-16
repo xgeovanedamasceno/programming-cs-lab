@@ -5,9 +5,9 @@ const FETCH_ERROR =  'token/FETCH_ERROR';
 
 
 //Action Creators
-const startFetch = () => ({ type: FETCH_STARTED });
-const successFetch = (token) => ({type: FETCH_SUCCESS, payload: token });
-const errorFetch = () => ({ type: FETCH_ERROR });
+export const startFetch = () => ({ type: FETCH_STARTED });
+export const successFetch = (token) => ({type: FETCH_SUCCESS, payload: token });
+export const errorFetch = () => ({ type: FETCH_ERROR });
 
 //Initial State
 const initialState = {
@@ -65,12 +65,13 @@ const enhancer = composeEnhancers(applyMiddleware(thunk));
 
 const store = Redux.createStore(reducer, enhancer);
 
-
+export default store;
 
 
 
 
 export function postFetch(url, user) {
+    console.log('post click')
    return async (dispatch) => {
        try {
            dispatch(startFetch())
@@ -101,6 +102,6 @@ const user = {
 }
 const urlUser = 'https://dogsapi.origamid.dev/json/api/user';
 
-const state = store.getState();
+/* const state = store.getState();
 if ( state.token === null ) store.dispatch(postFetch(url, user))
-else store.dispatch(fetchUser(urlUser))
+else store.dispatch(fetchUser(urlUser)) */
