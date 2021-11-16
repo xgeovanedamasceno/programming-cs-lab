@@ -1,5 +1,6 @@
 import token from './token.js'
-import store, { postFetch } from './token.js'
+import { postFetch } from './token.js'
+import store from './configureStore.js';
 
 const url = 'https://dogsapi.origamid.dev/json/jwt-auth/v1/token';
 const user = {

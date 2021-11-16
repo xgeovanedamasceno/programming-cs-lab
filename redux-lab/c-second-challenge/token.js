@@ -30,7 +30,7 @@ const reducer = immer.produce((state, action) => {
     }
 }, initialState);
 
-
+export default reducer;
 
 // code without immer
 /* const reducer = (state = initialState, action) => {
@@ -47,27 +47,6 @@ const reducer = immer.produce((state, action) => {
             return state;
     }
 }; */
-
-
-
-const thunk = (store) => (next) => (action) => {
-     
-    if (typeof action === 'function') return action(store.dispatch)
-
-    return next(action);
-}
-
-const { compose, applyMiddleware } = Redux;
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const enhancer = composeEnhancers(applyMiddleware(thunk));
-
-const store = Redux.createStore(reducer, enhancer);
-
-export default store;
-
-
 
 
 export function postFetch(url, user) {
@@ -94,14 +73,3 @@ export function postFetch(url, user) {
    }
     
 }
-
-const url = 'https://dogsapi.origamid.dev/json/jwt-auth/v1/token';
-const user = {
-    username: 'dog',
-    password: 'dog'
-}
-const urlUser = 'https://dogsapi.origamid.dev/json/api/user';
-
-/* const state = store.getState();
-if ( state.token === null ) store.dispatch(postFetch(url, user))
-else store.dispatch(fetchUser(urlUser)) */
