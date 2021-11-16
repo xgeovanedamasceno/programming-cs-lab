@@ -11,8 +11,6 @@ export const startFetch = () => ({ type: FETCH_STARTED });
 export const successFetch = (token) => ({type: FETCH_SUCCESS, payload: token, localStorage: 'token' });
 export const errorFetch = () => ({ type: FETCH_ERROR });
 
-
-
 //Initial State
 const initialState = {
     loading: false,
@@ -21,7 +19,6 @@ const initialState = {
 }
 
 export function createUser(url, user) {
-    console.log('post click')
    return async (dispatch) => {
        try {
            dispatch(startFetch())
@@ -37,12 +34,14 @@ export function createUser(url, user) {
           );
           const { token } = await response.json();
          dispatch(successFetch(token));
+         console.log(token)
+         return token;
        } catch (error) {
            console.log('postFetch try');
            dispatch(errorFetch(error.message))
        }
    }
-    
+
 }
 
 const reducer = immer.produce((state, action) => {

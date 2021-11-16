@@ -14,10 +14,8 @@ const initialState = {
     error: null
 }
 
-const token = getLocalStorage('token', null);
-console.log(token);
-
-export function getUser(url) {
+export function getUser(url, token) {
+    console.log(token);
     return async (dispatch) => {
         try {
             dispatch(startFetch());
@@ -28,10 +26,8 @@ export function getUser(url) {
                 },
             });
             const data = await response.json();
-            
-            if(data.status !== 200) {
-
-            }
+            console.log(data);
+            dispatch(successFetch(data));
         } catch (error) {
             dispatch(errorFetch(error.message))
         }
