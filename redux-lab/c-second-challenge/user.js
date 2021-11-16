@@ -15,7 +15,6 @@ const initialState = {
 }
 
 export function getUser(url, token) {
-    console.log(token);
     return async (dispatch) => {
         try {
             dispatch(startFetch());
@@ -26,7 +25,6 @@ export function getUser(url, token) {
                 },
             });
             const data = await response.json();
-            console.log(data);
             dispatch(successFetch(data));
         } catch (error) {
             dispatch(errorFetch(error.message))
