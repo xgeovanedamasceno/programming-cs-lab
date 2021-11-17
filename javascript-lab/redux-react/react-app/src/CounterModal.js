@@ -13,7 +13,7 @@ function Counter() {
         <>
         <div>
             <h2>Counter Modal</h2>
-            {stateModal && <h3>Total: {stateCounter}</h3>}
+            {stateModal && <h3>Total: { stateCounter }</h3>}
             <button onClick={ () => dispatch(increment()) }>Increment</button>
             <button onClick={ () => dispatch(decrement()) }>Decrement</button>
             <button onClick={ () => dispatch(open()) }>Open Modal</button>

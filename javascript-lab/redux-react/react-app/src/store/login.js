@@ -11,14 +11,14 @@ const slice = createSlice({
         fetchStarted(state) {
             state.loading = true;
         },
-        fetchSuccess(state) {
-            state.loading = false,
-            state.data = action.payload,
-            state.error = null
+        fetchSuccess(state, action) {
+            state.loading = false;
+            state.data = action.payload;
+            state.error = null;
         },
-        fetchError(state) {
-            state.loading = false,
-            state.error = action.payload
+        fetchError(state, action) {
+            state.loading = false;
+            state.error = action.payload;
         },
     },
 });
