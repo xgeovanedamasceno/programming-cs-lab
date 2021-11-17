@@ -1,17 +1,20 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { fetchToken } from "./store/login";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "./store/login";
 
 const FormLogin = () => {
     const [ username, setUsername ] = React.useState('');
     const [ password, setPassword ] = React.useState('');
 
     const dispatch = useDispatch()
+
+    const { data } = useSelector((state) => state.login.user)
+    
     
 
     function handleSubmit(event) {
         event.preventDefault();
-        dispatch(fetchToken({username, password}));
+        dispatch(login({username, password}));
     }
 
     return (
@@ -31,7 +34,8 @@ const FormLogin = () => {
             value={password}
             onChange={({ target }) => setPassword(target.value)}
         />
-        <button style={ { display: 'block', marginTop: '10px' } }>Submit</button> 
+        <button style={ { display: 'block', marginTop: '10px' } }>Submit</button>
+        <p>{data?.email}</p>
     </form>
     </>
     )

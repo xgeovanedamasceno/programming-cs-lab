@@ -4,9 +4,10 @@ import { increment, decrement } from "./store/counter";
 import { close, open } from "./store/modal";
 
 function Counter() {
+    
     const stateCounter = useSelector(state => state.counter.total);
     const stateModal = useSelector(state => state.modal)
-    console.log(stateCounter)
+    
     const dispatch = useDispatch();
 
     return (
