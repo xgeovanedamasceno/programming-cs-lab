@@ -1,0 +1,139 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #4a4a55;
+}
+
+/* style */
+
+html {
+  font-family: "Nunito", sans-serif;
+  color: #4a4a55;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+header {
+  background-color: #f6f6f6;
+  padding-top: 20px;
+  /* border: 1px solid greenyellow; */
+}
+
+header h1 {
+  width: max-content;
+  margin: 0px auto;
+  color: #4a4a55;
+  font-size: 3rem;
+}
+
+nav {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 300px;
+  text-align: center;
+}
+
+nav a {
+  font-size: 1rem;
+}
+
+#text-time {
+  width: 500px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  width: 450px;
+  height: 250px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #efefef;
+  font-size: 2rem;
+  color: #ff3e00;
+}
+
+form {
+  width: 450px;
+  margin: 0 auto;
+}
+
+input {
+  width: 50px;
+  margin: 5px 0;
+  padding: 2px;
+  display: inline;
+  border: 1px solid #4a4a5556;
+}
+
+form button {
+  position: relative;
+  left: 360px;
+  margin-top: 5px;
+  background-color: #4a4a55;
+  width: 70px;
+  height: 22px;
+  margin-left: 5px;
+  color: white;
+  text-transform: uppercase;
+}
+#text-time div {
+  width: 450px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 8rem;
+  color: #ff3e00;
+}
+
+#text-time button {
+  width: 150px;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: #ff3e00;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  border-bottom: 6px solid #d43a07;
+  cursor: pointer;
+}
+
+#pauseTimer {
+  display: none;
+}
+
+#report {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
