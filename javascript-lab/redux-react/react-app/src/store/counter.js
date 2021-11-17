@@ -16,6 +16,6 @@ const slice = createSlice({
     }
 })
 
-console.log(slice)
+
 export const { increment, decrement } = slice.actions;
 export default slice.reducer;
