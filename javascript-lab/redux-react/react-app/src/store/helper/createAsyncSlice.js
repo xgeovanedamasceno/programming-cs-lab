@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const AsyncSlice = (config) => {
+const createAsyncSlice = (config) => {
     const slice = createSlice({
         name: config.name,
         initialState: {
@@ -43,4 +43,4 @@ const AsyncSlice = (config) => {
     return {...slice, asyncAction };
 }
 
-export default AsyncSlice;
+export default createAsyncSlice;
