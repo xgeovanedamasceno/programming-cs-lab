@@ -5,7 +5,7 @@ import { close, open } from "./store/modal";
 
 function Counter() {
     
-    const stateCounter = useSelector(state => state.counter);
+    const stateCounter = useSelector(state => state.counter.total);
     console.log(stateCounter)
     const stateModal = useSelector(state => state.modal)
     

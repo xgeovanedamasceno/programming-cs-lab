@@ -4,6 +4,26 @@ import createAsyncSlice from "./helper/createAsyncSlice";
 
 const token = createAsyncSlice({
     name: 'token',
+    reducers: {
+        fetchSuccess: {
+            reducer(state, action) {
+                state.loading = false;
+                state.data = action.payload
+                state.error = null;
+            },
+            prepare(payload) {
+                return {
+                    payload,
+                    meta: {
+                        localStorage: {
+                            key: 'token',
+                            value: payload.token
+                        },
+                    },
+                }
+            }
+        },
+    },
     fetchConfig: (userPayload) => ({
         url: 'https://dogsapi.origamid.dev/json/jwt-auth/v1/token',
         options: {
