@@ -1,12 +1,17 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "./store/login";
+import { autoLogin, login } from "./store/login";
 
 const FormLogin = () => {
     const [ username, setUsername ] = React.useState('');
     const [ password, setPassword ] = React.useState('');
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+
+    React.useEffect(() => {
+        dispatch(autoLogin());
+    }, [ dispatch ])
+
 
     const { data } = useSelector((state) => state.login.user)
     

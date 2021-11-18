@@ -1,9 +1,15 @@
 import { combineReducers } from "@reduxjs/toolkit";
-
 import createAsyncSlice from "./helper/createAsyncSlice";
+import getLocalStorage from "./helper/getLocalStorage";
+
 
 const token = createAsyncSlice({
     name: 'token',
+    initialState: {
+        data: {
+            token: getLocalStorage('token', null),
+        }
+    },
     reducers: {
         fetchSuccess: {
             reducer(state, action) {
@@ -64,6 +70,13 @@ export const login = (user) => async (dispatch) => {
     } catch (error) {
 
     }
+}
+
+export const autoLogin = () => async (dispatch, getState) => {
+    const state = getState();
+    const { token } =  state.login.token.data;
+    if ( token ) await dispatch(fetchUser(token));
+    console.log(token)
 }
 
 export default reducer;
