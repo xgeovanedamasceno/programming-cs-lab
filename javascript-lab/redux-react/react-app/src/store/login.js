@@ -76,7 +76,7 @@ export const autoLogin = () => async (dispatch, getState) => {
     const state = getState();
     const { token } =  state.login.token.data;
     if ( token ) await dispatch(fetchUser(token));
-    console.log(token)
+    
 }
 
 export default reducer;
