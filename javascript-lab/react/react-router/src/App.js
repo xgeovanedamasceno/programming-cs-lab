@@ -1,12 +1,29 @@
 import './App.css'
+
 import React from 'react';
-import Product from './Product';
+import Slide from './Slide';
+
 
 function App() {
-  const [active, setActive] = React.useState(false);
+  
+  const slides = [
+    {
+      id: "slide1",
+      text: "Slide 1"
+    },
+    {
+      id: "slide2",
+      text: "Slide 2"
+    },
+    {
+      id: "slide3",
+      text: "Slide 3"
+    }
+  ]
+  
   return (
     <div>
- 
+      <Slide slides={slides}/>
     </div>
   );
 }
