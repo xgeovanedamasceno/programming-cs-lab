@@ -1,13 +1,23 @@
-
-
 import React from 'react';
+import Header from './Header';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import NotFound from './NotFound'
+import Login from './Login';
 
 function App() {
     
   return (
-    <div>
-      
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="about" element={<About/>}/>
+        <Route path="*" element={<NotFound/>}/>
+        <Route path="login" element={<Login/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
