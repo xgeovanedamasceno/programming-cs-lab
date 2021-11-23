@@ -1,7 +1,14 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 const Header = () => {
+    const location = useLocation();
+
+    React.useEffect(() => {
+        console.log('change route')
+    }, [location]);
+
+    
     return (
         <header>
             <nav>
