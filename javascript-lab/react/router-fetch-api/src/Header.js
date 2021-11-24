@@ -11,6 +11,8 @@ const Header = () => {
         padding: '5px 15px',
         borderRadius: '5px',
         fontWeight: 'bold',
+        fontFamily: 'monospace',
+        fontSize: '18px',
         textDecoration: 'none',
     }
 
