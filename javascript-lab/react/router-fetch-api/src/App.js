@@ -1,18 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import StyledHeader from "./Header";
 import Home from "./Home";
+import Products from "./Products";
 
 
 
-import StyledWrapper from "./Wrapper";
+
 
 
 
 function App() {
   return (
     <BrowserRouter>
-      <StyledWrapper />
+      <StyledHeader/>
       <Routes>
-        <Route to="/" element={<Home/>} />
+        <Route path="/" element={<Home/>} />
+        <Route path="products" element={<Products/>} />
       </Routes>
     </BrowserRouter>
 

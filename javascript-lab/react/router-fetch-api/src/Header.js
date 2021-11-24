@@ -1,12 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import './App.css'
 
-
-
-
-const Header = (props) => {
-    console.log(props)
+const Header = () => {
 
     const normalStyle = {
         backgroundColor: '#e6e6e6', 
@@ -25,7 +21,7 @@ const Header = (props) => {
     }
 
     return (
-        <nav className={ props.className }>
+        <nav className="container">
             <NavLink to="products" style={normalStyle} activeStyle={ activeStyle }>
                 Products
             </NavLink>
@@ -36,10 +32,8 @@ const Header = (props) => {
     )
 }
 
-const StyledHeader = styled(Header)`
-    margin-bottom: 30px;
-`
 
-export default StyledHeader;
+
+export default Header;
 
 

@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css'
 
-const Home =  () => {
+const Products = () => {
     return (
         <section className="container">
-        
+            <p>Products Page</p>
         </section>
+     
     )
 }
 
-export default Home;
+export default Products;
