@@ -1,10 +1,16 @@
+import { BrowserRouter } from "react-router-dom";
+
+
 import StyledWrapper from "./Wrapper";
+
+
 
 function App() {
   return (
-    <div>
-     <StyledWrapper></StyledWrapper>
-    </div>
+    <BrowserRouter>
+      <StyledWrapper />
+    </BrowserRouter>
+
   );
 }
 

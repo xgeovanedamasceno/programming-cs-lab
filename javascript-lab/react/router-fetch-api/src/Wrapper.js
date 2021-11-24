@@ -1,21 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import Header from './Header';
 
 const Wrapper = (props) => {
     return (
         <section className={ props.className }>
-            
+            <Header />
         </section>
     )
 }
 
 const StyledWrapper = styled(Wrapper)`
-    border: 2px solid grey;
     color: silver;
-    margin: 0 auto;
+    margin: 40px auto;
     width: 800px;
     height: 1000px;
-
 `
 
 export default StyledWrapper;
