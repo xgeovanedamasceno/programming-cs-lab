@@ -1,8 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation} from "react-router-dom";
 import './App.css'
 
 const Header = () => {
+
 
     const normalStyle = {
         backgroundColor: '#e6e6e6', 
@@ -28,6 +29,7 @@ const Header = () => {
             <NavLink to="contact" style={normalStyle} activeStyle={ activeStyle }>
                 Contact
             </NavLink>
+         
         </nav>
     )
 }
