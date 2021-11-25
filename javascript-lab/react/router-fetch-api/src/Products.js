@@ -21,7 +21,7 @@ const Products = () => {
             {products?.map(item => (
                 <div key={item.id}>
                     <Link to={item.id}>
-                        <img className="photo" alt={ item.fotos[0].titulo }src={ item.fotos[0].src }/>
+                        <img className="products-photo" alt={ item.fotos[0].titulo }src={ item.fotos[0].src }/>
                     </Link>
                 </div>
             ))}
