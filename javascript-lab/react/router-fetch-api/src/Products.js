@@ -1,5 +1,6 @@
 import React from 'react';
-import { useLocation } from 'react-router';
+import { Routes, useLocation } from 'react-router';
+import { Link } from 'react-router-dom';
 import './App.css'
 
 const Products = () => {
@@ -8,7 +9,6 @@ const Products = () => {
     const { pathname } = useLocation();
         
     React.useEffect(() => {
-   
         fetch('https://ranekapi.origamid.dev/json/api/produto')
             .then(response => response.json())
             .then(json => setProducts(json));
@@ -20,7 +20,9 @@ const Products = () => {
     
             {products?.map(item => (
                 <div key={item.id}>
-                    <img className="photo" alt={ item.fotos[0].titulo }src={ item.fotos[0].src }/>
+                    <Link to={item.id}>
+                        <img className="products-photo" alt={ item.fotos[0].titulo }src={ item.fotos[0].src }/>
+                    </Link>
                 </div>
             ))}
         </section>
