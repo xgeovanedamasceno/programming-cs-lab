@@ -7,12 +7,9 @@ const Product = () => {
     const [product, setProduct] = useState(null);
 
     console.log(product)
-
     
     const { pathname } = useLocation();
     const { id } = useParams();
-
-  
 
     React.useEffect(() => {
         fetch(`https://ranekapi.origamid.dev/json/api/produto/${id}`)
@@ -31,7 +28,7 @@ const Product = () => {
             </div>
             <div className="container-description">
                <h2> { product?.nome }</h2>
-               <p> $ {product?.preco }</p>
+               <p>$ {product?.preco }</p>
             </div>
         </section>
     )
