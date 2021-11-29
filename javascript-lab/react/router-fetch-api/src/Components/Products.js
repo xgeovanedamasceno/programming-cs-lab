@@ -1,7 +1,9 @@
 import React from 'react';
-import { Routes, useLocation } from 'react-router';
+import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
-import './App.css'
+import '../App.css'
+import Head from './Head';
+import styles from "./Products.module.css"
 
 const Products = () => {
     const [products, setProducts] = React.useState(null);
@@ -16,12 +18,12 @@ const Products = () => {
 
     
     return (
-        <section className="container-photos">
-    
+        <section className={styles.photos}>
+            <Head title="Products" description="Products Page"/>
             {products?.map(item => (
                 <div key={item.id}>
                     <Link to={item.id}>
-                        <img className="products-photo" alt={ item.fotos[0].titulo }src={ item.fotos[0].src }/>
+                        <img className={styles.photo} alt={ item.fotos[0].titulo }src={ item.fotos[0].src }/>
                     </Link>
                 </div>
             ))}

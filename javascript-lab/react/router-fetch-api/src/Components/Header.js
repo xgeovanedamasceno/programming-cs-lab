@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink, useLocation} from "react-router-dom";
-import './App.css'
+import { NavLink } from "react-router-dom";
+import '../App.css'
 
 const Header = () => {
 

@@ -1,12 +1,12 @@
-import "./App.css"
 import React, { useState } from 'react';
 import { useLocation, useParams } from 'react-router';
+import Head from './Head';
+import styles from "./Product.module.css";
+
 
 const Product = () => {
 
     const [product, setProduct] = useState(null);
-
-    console.log(product)
     
     const { pathname } = useLocation();
     const { id } = useParams();
@@ -20,13 +20,14 @@ const Product = () => {
     product?.fotos.forEach(item => console.log(item));
 
     return (
-        <section className="container-product">
-            <div className="container-photo">
+        <section className={styles.container}>
+            <Head title="Product" description="Product Page"/>
+            <div className={styles.containerPhotos}>
                 { product?.fotos.map(item => (
-                    <img className="product-photo" key={item.titulo} alt={item.titulo} src={item.src} />
+                    <img className={styles.productPhoto} key={item.titulo} alt={item.titulo} src={item.src} />
                 )) } 
             </div>
-            <div className="container-description">
+            <div className={styles.containerDescription}>
                <h2> { product?.nome }</h2>
                <p>$ {product?.preco }</p>
             </div>
