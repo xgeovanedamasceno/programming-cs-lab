@@ -1,14 +1,19 @@
-import express, {Request, Response, NextFunction} from 'express';
+import express, { urlencoded } from 'express';
+import statusRoute from './routes/status.route';
+import usersRoute from './routes/users.route';
 
 // app's instance
 const app = express(); // lib to manage routes
 
-// setting route and response data
-app.get('/status', (req: Request, res: Response, next: NextFunction) => {
-    res.status(200).send({ greettings: 'Hello There!' });
-});
+// setting application 
+app.use(express.json()); // middleware to interpret Header Content Type, if JSON convert to object
+app.use(urlencoded({ extended: true})) // middleware to Header Content Type (?)
 
-// setting door
+// setting routes 
+app.use(usersRoute);
+app.use(statusRoute);
+
+// Init server
 app.listen(3000, () => {
     console.log('Hello Node! App running... Port 3000');
-})
+});
