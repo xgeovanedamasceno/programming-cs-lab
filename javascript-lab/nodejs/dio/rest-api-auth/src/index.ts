@@ -1,4 +1,5 @@
 import express, { urlencoded } from 'express';
+import errorHandler from './middlewares/error.handler.middleware';
 import statusRoute from './routes/status.route';
 import usersRoute from './routes/users.route';
 
@@ -12,6 +13,9 @@ app.use(urlencoded({ extended: true})) // middleware to Header Content Type (?)
 // setting routes 
 app.use(usersRoute);
 app.use(statusRoute);
+
+// setting error handler
+app.use(errorHandler);
 
 // Init server
 app.listen(3000, () => {
