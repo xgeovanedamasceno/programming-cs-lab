@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import '../App.css'
+import Head from './Head';
 import styles from "./Products.module.css"
 
 const Products = () => {
@@ -18,7 +19,7 @@ const Products = () => {
     
     return (
         <section className={styles.photos}>
-    
+            <Head title="Products" description="Products Page"/>
             {products?.map(item => (
                 <div key={item.id}>
                     <Link to={item.id}>

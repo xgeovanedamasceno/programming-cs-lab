@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useLocation, useParams } from 'react-router';
+import Head from './Head';
 import styles from "./Product.module.css";
 
-console.log(styles);
+
 const Product = () => {
 
     const [product, setProduct] = useState(null);
@@ -20,6 +21,7 @@ const Product = () => {
 
     return (
         <section className={styles.container}>
+            <Head title="Product" description="Product Page"/>
             <div className={styles.containerPhotos}>
                 { product?.fotos.map(item => (
                     <img className={styles.productPhoto} key={item.titulo} alt={item.titulo} src={item.src} />
