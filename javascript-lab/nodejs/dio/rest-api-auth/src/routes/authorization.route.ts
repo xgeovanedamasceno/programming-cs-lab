@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response, Router } from "express";
 import ForbiddenError from "../models/errors/forbidden.error.model";
-import  JWT  from "jsonwebtoken";
+import  JWT, { SignOptions }  from "jsonwebtoken";
 import { StatusCodes } from "http-status-codes";
 import basicAuthenticationMiddleware from "../middlewares/basic-authentication.middleware";
 import jwtAuthenticationMiddleware from "../middlewares/jwt-authentication.middleware";
@@ -16,7 +16,7 @@ authorizationRoute.post('/token', basicAuthenticationMiddleware, (req: Request, 
         }
 
         const jwtPayload = { username: user.username };
-        const jwtOptions = { subject: user?.uuid };
+        const jwtOptions: SignOptions = { subject: user?.uuid };
         const secretKey = 'my_secret_key' ;
 
         const jwt = JWT.sign(jwtPayload, secretKey, jwtOptions);
@@ -35,7 +35,3 @@ authorizationRoute.post('/token/validate', jwtAuthenticationMiddleware, (req: Re
 });
 
 export default authorizationRoute;
-
-/* {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjM4MjYwNzQzLCJzdWIiOiI3N2I1YzZmYS0wOTEwLTQ5OTgtOTM2OS1iZDg3MTllZDkzZWQifQ.2qvmPPAzbWZQz4-OYJ3OOh1jKsrRwG5HAoKfOYp2eLs"
-} */
