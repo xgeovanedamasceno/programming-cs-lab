@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "noEmit": false,
+        "noEmitOnError": false,
+        "alwaysStrict": true,
+        "esModuleInterop": true,
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "target": "ES2019",
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "sourceMap": true,
+        "lib": ["ES2021", "ES7", "DOM", "ES6"],
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    }
+}
