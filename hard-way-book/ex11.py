@@ -4,5 +4,7 @@ print("How tall are you?", end=' ')
 height = input()
 print("How much do you weigh?", end=' ')
 weight =  input()
+print("What is your favorite food?", end=' ')
+food = input()
 
-print(f"So, you are {age} old, height {height} tall and {weight} heavy.")
+print(f"So, you are {age} old, height {height} tall, {weight} heavy and your favorite food is {food}.")
