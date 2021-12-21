@@ -31,6 +31,8 @@ read  txt value and print it
 """
 print(txt.read())
 
+txt.close()
+
 print("Type the filename again:")
 """
 read input keyboard and assigned to file_again variable
@@ -44,3 +46,5 @@ open file and print it value
 txt_again = open(file_again
 )
 print(txt_again.read())
+
+txt.close()
