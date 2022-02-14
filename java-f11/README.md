@@ -45,3 +45,23 @@ class MyProgram {
       24: return
 }
 ```
+
+## 2. Variables and casting
+
+```
+double d = 6;
+int i = d; // does not compile
+```
+
+```
+int i = 5;
+double nd = i; // does compila
+```
+
+casting:
+
+```
+double cd = 3.34;
+int i = (int) cd;
+// i equals to 3
+```
