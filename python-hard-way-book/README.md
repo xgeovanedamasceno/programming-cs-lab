@@ -17,3 +17,11 @@ age = input()
 ```
 
 Basically, tells to print function to not 'start a newline' or 'to continue on the same line'.
+
+
+## 3. pydoc
+
+comand
+```
+python3 -m pydoc ...
+```
