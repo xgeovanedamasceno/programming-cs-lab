@@ -1,3 +1,0 @@
-This is a test file.
-Just to use in some scripts.
-Nothing special.
