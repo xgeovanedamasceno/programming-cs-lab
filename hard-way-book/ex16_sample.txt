@@ -1,6 +1,0 @@
-How does it works? 
- It will replace or add? 
- Let's see...
-mode 'w' empties the file 
- but mode 'a' appending to the end 
- Let's check...
