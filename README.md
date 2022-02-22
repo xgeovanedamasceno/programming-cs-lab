@@ -1,3 +1,3 @@
-# Python Programming
+# CS Programming Lab
 
-This repository contains Python code through some exercises to practice syntax.
+This repository is a lab for practicing programming.
