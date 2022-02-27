@@ -65,3 +65,17 @@ double cd = 3.34;
 int i = (int) cd;
 // i equals to 3
 ```
+
+## 3. Division by 0
+
+```
+float divisionByZero = 2 / 0;
+```
+
+Arithmetic Excepetion
+
+```
+float divisionByZero = 2 / 0.0
+```
+
+Infinity
