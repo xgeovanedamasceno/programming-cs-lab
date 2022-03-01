@@ -1,17 +1,30 @@
 public class Fibonacci {
   public static void main(String[] args) {
     int fib = 0;
-    for (int i = 0; fib < 22; i++) {
+    int last  = 0;
+    int penultimate = 0;
+    for (int i = 1; fib < 22; i++) {
       if (i == 0) {
+        fib = last - penultimate;
+        System.out.println("valor de i " + i);
         System.out.println(fib);
         continue;
       }
       if (i == 1) {
-        System.out.println(fib + i);
+        last = i;
+        fib = last + penultimate;
+        System.out.println("valor de i " + i);
+        System.out.println(fib);
         continue;
       }
-      fib = (i - 1) + (i - 2);
+      if (i == 2) {
+        fib = last + penultimate;
+        penultimate = last;
+      }
+      System.out.println("valor de i eh" + i);
+      fib = last + penultimate;
       System.out.println(fib);
+      last = fib;
     }
   }
 }
