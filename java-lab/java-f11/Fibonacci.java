@@ -3,9 +3,10 @@ public class Fibonacci {
     int fib = 0;
     int last = 0;
     int current = 1;
-    while (current < 22) {
+    System.out.print(last + " " + current + " ");
+    while (current < 100) {
       fib = last + current;
-      System.out.println(fib);
+      System.out.print(fib + " ");
       last = current;
       current = fib;
     }
