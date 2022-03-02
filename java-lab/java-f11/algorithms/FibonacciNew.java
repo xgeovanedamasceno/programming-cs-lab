@@ -1,3 +1,5 @@
+package algorithms;
+
 public class FibonacciNew {
   public static void main(String[] args) {
     int last = 0;
