@@ -1,3 +1,5 @@
+package algorithms;
+
 public class Factorial {
   public static void main(String[] args) {
     long factorial = 1;

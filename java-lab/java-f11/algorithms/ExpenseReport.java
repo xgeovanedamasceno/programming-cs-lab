@@ -1,3 +1,5 @@
+package algorithms;
+
 public class ExpenseReport {
     double january = 15000;
     double february = 23000;

@@ -1,3 +1,5 @@
+package algorithms;
+
 public class SumOneTo1000 {
   public static void main(String[] args) {
     int sum = 0;

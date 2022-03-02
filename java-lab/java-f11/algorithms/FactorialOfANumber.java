@@ -1,3 +1,5 @@
+package algorithms;
+
 public class FactorialOfANumber {
   public static void main(String[] args) {
     int numberF = 8;
