@@ -38,6 +38,14 @@ public class AccountTest {
       System.out.println("same");
     else
       System.out.println("different");
+
+    System.out.println(c1.balance);
+
+    c1.balance = 300;
+
+    System.out.println(c1.balance);
+
+    System.out.println(c1.calculateFinancialIncome());
   }
 
 }
