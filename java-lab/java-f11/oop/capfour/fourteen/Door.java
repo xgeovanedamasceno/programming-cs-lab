@@ -7,12 +7,6 @@ public class Door {
   float height;
   float depth;
 
-  Door(float width, float height, float depth) {
-    this.width = width;
-    this.height = height;
-    this.depth = depth;
-  }
-
   void open() {
     this.open = true;
   }

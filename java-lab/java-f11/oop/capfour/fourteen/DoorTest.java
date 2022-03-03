@@ -2,7 +2,7 @@ package oop.capfour.fourteen;
 
 public class DoorTest {
   public static void main(String[] args) {
-    Door doorOne = new Door(100, 180, 5);
+    Door doorOne = new Door();
 
     doorOne.paint("black");
 
