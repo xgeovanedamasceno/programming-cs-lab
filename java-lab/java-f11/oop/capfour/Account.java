@@ -5,7 +5,7 @@ public class Account {
   int number;
   String branch;
   double balance;
-  String openingDate;
+  Data openingDate;
 
   public void withDrawMoney(double amount) {
     this.balance -= amount;
@@ -21,9 +21,9 @@ public class Account {
 
   public String recoverDataForPrinting() {
     String data = "Number Account: " + this.number + "\n" +
-           "Opening Date: " + this.openingDate + "\n" +
-           "Holder: " + this.holder + "\n" +
-           "Balance: " + this.balance + "\n";
+        "Opening Date: " + this.openingDate.data() + "\n" +
+        "Holder: " + this.holder + "\n" +
+        "Balance: " + this.balance + "\n";
     return data;
 
   }
