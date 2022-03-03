@@ -21,8 +21,17 @@ public class AccountTest {
     System.out.println(c2.recoverDataForPrinting());
 
     if (c1 == c2)
-      System.out.println("sane");
+      System.out.println("same");
+    else
+      System.out.println("different");
+
+    Account c3 = new Account();
+    c3 = c2;
+
+    if (c3 == c2)
+      System.out.println("same");
     else
       System.out.println("different");
   }
+
 }
