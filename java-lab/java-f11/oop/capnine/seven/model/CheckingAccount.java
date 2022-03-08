@@ -17,14 +17,13 @@ public class CheckingAccount extends Account {
 
   @Override
   public String getType() {
-    return super.getType() + " Checking Account";
+    return "Checking Account";
   }
 
   @Override
   public String recoverDataForPrinting() {
-    String previousText = super.recoverDataForPrinting();
-    previousText = previousText + this.getType();
-    return previousText;
+    String superData = super.recoverDataForPrinting();
+    return superData;
   }
 
 }

@@ -12,7 +12,12 @@ public class AccountTest {
 
     Account c1 = new CheckingAccount(dataToday, "Peterson", "5th Avenue");
     c1.cashDeposit(200);
+    System.out.println();
     System.out.println(c1.recoverDataForPrinting());
+
+    System.out.println();
+    System.out.println("*******************");
+    System.out.println();
 
     Account c2 = new SavingsAccount(dataToday, "Mary", "6th Avenue");
     c2.cashDeposit(300);

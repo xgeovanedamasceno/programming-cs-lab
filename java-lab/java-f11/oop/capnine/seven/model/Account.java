@@ -1,6 +1,6 @@
 package oop.capnine.seven.model;
 
-public class Account {
+public abstract class Account {
   static int number;
   private int id;
   private String holder;
@@ -37,7 +37,8 @@ public class Account {
     String data = "Number Account: " + this.id + "\n" +
         "Opening Date: " + this.openingDate.formatedData() + "\n" +
         "Holder: " + this.holder + "\n" +
-        "Balance: " + this.balance + "\n";
+        "Balance: " + this.balance + "\n" +
+        "Type: " + this.getType();
     return data;
   }
 
@@ -61,7 +62,5 @@ public class Account {
     return openingDate;
   }
 
-  public String getType() {
-    return Type;
-  }
+  public abstract String getType();
 }
