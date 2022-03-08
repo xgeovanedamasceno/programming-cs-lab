@@ -1,4 +1,4 @@
-package oop.capfour.fourteen;
+package oop.basictwo;
 
 public class HouseTest {
   public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package oop.capten.one;
+package oop.abstracts;
 
 public class BonusControl {
   private double totalEmployeesBonus = 0;

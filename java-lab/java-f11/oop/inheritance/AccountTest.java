@@ -1,9 +1,9 @@
-package oop.capnine.seven;
+package oop.inheritance;
 
-import oop.capnine.seven.model.Account;
-import oop.capnine.seven.model.CheckingAccount;
-import oop.capnine.seven.model.Data;
-import oop.capnine.seven.model.SavingsAccount;
+import oop.inheritance.model.Account;
+import oop.inheritance.model.CheckingAccount;
+import oop.inheritance.model.Data;
+import oop.inheritance.model.SavingsAccount;
 
 public class AccountTest {
   public static void main(String[] args) {

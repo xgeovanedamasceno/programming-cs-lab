@@ -1,4 +1,4 @@
-package oop.capfour.fourteen;
+package oop.basictwo;
 
 public class Person {
   String name;

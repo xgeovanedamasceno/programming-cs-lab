@@ -1,4 +1,4 @@
-package oop.capfour.twelve;
+package oop.basic;
 
 public class AccountTest {
   public static void main(String[] args) {
