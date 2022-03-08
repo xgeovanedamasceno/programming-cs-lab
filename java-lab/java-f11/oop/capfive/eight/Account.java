@@ -34,7 +34,7 @@ public class Account {
 
   public String recoverDataForPrinting() {
     String data = "Number Account: " + this.id + "\n" +
-        "Opening Date: " + this.openingDate.data() + "\n" +
+        "Opening Date: " + this.openingDate.formatedData() + "\n" +
         "Holder: " + this.holder + "\n" +
         "Balance: " + this.balance + "\n";
     return data;
