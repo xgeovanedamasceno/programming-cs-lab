@@ -1,11 +1,11 @@
-package oop.capnine.seven.model;
+package oop.modifiers;
 
 public class Data {
   private int day;
   private int month;
   private int year;
 
-  public Data(int day, int month, int year) {
+  Data(int day, int month, int year) {
     this.fillData(day, month, year);
   }
 

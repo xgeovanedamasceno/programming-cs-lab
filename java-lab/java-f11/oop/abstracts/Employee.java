@@ -1,4 +1,4 @@
-package oop.capten.one;
+package oop.abstracts;
 
 public abstract class Employee {
   protected String name;

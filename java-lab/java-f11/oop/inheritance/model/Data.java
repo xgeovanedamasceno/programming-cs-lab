@@ -1,11 +1,11 @@
-package oop.capfive.eight;
+package oop.inheritance.model;
 
 public class Data {
   private int day;
   private int month;
   private int year;
 
-  Data(int day, int month, int year) {
+  public Data(int day, int month, int year) {
     this.fillData(day, month, year);
   }
 

@@ -1,4 +1,4 @@
-package oop.capfive.eight;
+package oop.modifiers;
 
 public class AccountTest {
   public static void main(String[] args) {

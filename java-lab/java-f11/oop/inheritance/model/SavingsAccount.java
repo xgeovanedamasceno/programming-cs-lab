@@ -1,4 +1,4 @@
-package oop.capnine.seven.model;
+package oop.inheritance.model;
 
 public class SavingsAccount extends Account {
 

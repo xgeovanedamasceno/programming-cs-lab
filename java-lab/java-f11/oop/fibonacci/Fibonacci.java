@@ -1,4 +1,4 @@
-package oop.capfour.thirteen;
+package oop.fibonacci;
 
 public class Fibonacci {
   int calculateFibonacci(int i) {
