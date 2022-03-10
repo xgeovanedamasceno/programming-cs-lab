@@ -1,5 +1,9 @@
 package oop.exceptions;
 
+import oop.model.Account;
+import oop.model.CheckingAccount;
+import oop.model.Data;
+
 public class ErrorTest {
   public static void main(String[] args) {
     System.out.println("Start of Main");

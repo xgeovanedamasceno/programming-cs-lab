@@ -1,4 +1,4 @@
-package oop.basictwo;
+package oop.basic;
 
 public class House {
   String color;

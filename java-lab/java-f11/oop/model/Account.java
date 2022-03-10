@@ -1,4 +1,4 @@
-package oop.javalang;
+package oop.model;
 
 public abstract class Account {
   static int number;

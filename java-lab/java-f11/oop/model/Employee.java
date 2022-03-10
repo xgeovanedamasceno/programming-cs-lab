@@ -1,4 +1,4 @@
-package oop.interfaces;
+package oop.model;
 
 public abstract class Employee {
   protected String name;
