@@ -9,7 +9,6 @@ public class FileTest {
       FileInputStream fileInputStream = new java.io.FileInputStream("file.txt");
       System.out.println(fileInputStream);
     } catch (FileNotFoundException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
   }
