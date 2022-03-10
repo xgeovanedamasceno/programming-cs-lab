@@ -1,4 +1,4 @@
-package oop.exceptions;
+package oop.model;
 
 public class SavingsAccount extends Account {
 
@@ -13,11 +13,5 @@ public class SavingsAccount extends Account {
   @Override
   public String getType() {
     return "Saving Account";
-  }
-
-  @Override
-  public String recoverDataForPrinting() {
-    String superData = super.recoverDataForPrinting();
-    return superData;
   }
 }

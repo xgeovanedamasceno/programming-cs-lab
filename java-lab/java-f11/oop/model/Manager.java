@@ -1,4 +1,4 @@
-package oop.abstracts;
+package oop.model;
 
 public class Manager extends Employee {
   @Override

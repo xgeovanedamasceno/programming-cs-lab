@@ -1,12 +1,17 @@
 package oop.javalang;
 
+import oop.model.Account;
+import oop.model.CheckingAccount;
+import oop.model.Data;
+import oop.model.SavingsAccount;
+
 public class AccountTest {
     public static void main(String[] args) {
 
         System.out.println();
 
         Data today = new Data(9, 03, 2022);
-        Account c1 = new CheckingAccount(today, "Jefferson", "7th Avenue");      
+        Account c1 = new CheckingAccount(today, "Jefferson", "7th Avenue");
         c1.cashDeposit(5000);
 
         System.out.println(c1);
