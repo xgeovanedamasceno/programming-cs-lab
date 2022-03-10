@@ -1,6 +1,6 @@
 package oop.model;
 
-public abstract class Account {
+public abstract class Account implements Comparable<Account> {
   static int number;
   private int id;
   private String holder;
@@ -8,6 +8,10 @@ public abstract class Account {
   private double balance;
   private Data openingDate;
   protected String Type = "Account";
+
+  public Account() {
+
+  }
 
   public Account(Data data) {
     this.openingDate = data;
@@ -43,16 +47,7 @@ public abstract class Account {
     return data;
   }
 
-  @Override
-  public boolean equals(Object obj) {
-      if (obj == null)
-        return false;
-      if (!(obj instanceof Account))
-        return false;
-      
-      Account otherAccount = (Account) obj;
-      return (this.id == otherAccount.id && this.branch.equals(otherAccount.branch));
-  }
+
 
   private void setId(int id) {
     this.id = id;
@@ -79,4 +74,20 @@ public abstract class Account {
   }
 
   public abstract String getType();
+
+  @Override
+  public boolean equals(Object obj) {
+    if (obj == null)
+      return false;
+    if (!(obj instanceof Account))
+      return false;
+
+    Account otherAccount = (Account) obj;
+    return (this.holder == otherAccount.holder && this.branch.equals(otherAccount.branch));
+  }
+
+  @Override
+  public int compareTo(Account otherAccount) {
+    return this.holder.compareTo(otherAccount.holder);
+  }
 }
