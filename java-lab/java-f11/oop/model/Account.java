@@ -57,6 +57,10 @@ public abstract class Account implements Comparable<Account> {
     return id;
   }
 
+  public String getHolder() {
+    return holder;
+  }
+
   public void setBranch(String branch) {
     this.branch = branch;
   }
