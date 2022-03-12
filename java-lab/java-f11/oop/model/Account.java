@@ -1,8 +1,11 @@
 package oop.model;
 
+import java.util.Objects;
+
 public abstract class Account implements Comparable<Account> {
   static int number;
   private int id;
+  private int fakeId;
   private String holder;
   private String branch;
   private double balance;
@@ -25,6 +28,14 @@ public abstract class Account implements Comparable<Account> {
     this.branch = branch;
   }
 
+  public int getFakeId() {
+    return fakeId;
+  }
+
+  public void setFakeId(int fakeId) {
+    this.fakeId = fakeId;
+  }
+
   public void withDrawMoney(double amount) {
     this.balance -= amount;
   }
@@ -39,11 +50,11 @@ public abstract class Account implements Comparable<Account> {
 
   @Override
   public String toString() {
-    String data = "Number Account: " + this.id + "\n" +
+    String data = "\nNumber Account: " + this.id + "\n" +
     "Opening Date: " + this.openingDate.formatedData() + "\n" +
     "Holder: " + this.holder + "\n" +
     "Balance: " + this.balance + "\n" +
-    "Type: " + this.getType();
+    "Type: " + this.getType() + "\n";
     return data;
   }
 
@@ -55,6 +66,10 @@ public abstract class Account implements Comparable<Account> {
 
   public int getId() {
     return id;
+  }
+
+  public String getHolder() {
+    return holder;
   }
 
   public void setBranch(String branch) {
@@ -75,6 +90,7 @@ public abstract class Account implements Comparable<Account> {
 
   public abstract String getType();
 
+  /*
   @Override
   public boolean equals(Object obj) {
     if (obj == null)
@@ -84,6 +100,20 @@ public abstract class Account implements Comparable<Account> {
 
     Account otherAccount = (Account) obj;
     return (this.holder == otherAccount.holder && this.branch.equals(otherAccount.branch));
+  }
+  */
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Account account = (Account) o;
+    return fakeId == account.fakeId && Objects.equals(branch, account.branch);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(fakeId, branch);
   }
 
   @Override

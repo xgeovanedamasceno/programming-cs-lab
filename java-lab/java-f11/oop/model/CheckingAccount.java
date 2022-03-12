@@ -10,7 +10,11 @@ public class CheckingAccount extends Account {
     super(data);
   }
 
-  @Override
+    public CheckingAccount() {
+
+    }
+
+    @Override
   public void withDrawMoney(double amount) {
     super.withDrawMoney(amount);
   }

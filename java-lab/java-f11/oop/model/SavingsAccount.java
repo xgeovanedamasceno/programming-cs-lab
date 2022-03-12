@@ -10,7 +10,11 @@ public class SavingsAccount extends Account {
     super(data);
   }
 
-  @Override
+    public SavingsAccount() {
+
+    }
+
+    @Override
   public String getType() {
     return "Saving Account";
   }

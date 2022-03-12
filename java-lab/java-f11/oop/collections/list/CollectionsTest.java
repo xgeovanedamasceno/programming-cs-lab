@@ -1,4 +1,4 @@
-package oop.collections;
+package oop.collections.list;
 
 import oop.model.Account;
 import oop.model.CheckingAccount;
@@ -35,6 +35,11 @@ public class CollectionsTest {
         System.out.println("Sort");
 
         Collections.sort(myAccounts);
+
+        System.out.println(myAccounts);
+
+        System.out.println("Reverse");
+        Collections.reverse(myAccounts);
 
         System.out.println(myAccounts);
 
