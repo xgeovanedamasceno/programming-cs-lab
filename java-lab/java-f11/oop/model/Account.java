@@ -39,11 +39,11 @@ public abstract class Account implements Comparable<Account> {
 
   @Override
   public String toString() {
-    String data = "Number Account: " + this.id + "\n" +
+    String data = "\nNumber Account: " + this.id + "\n" +
     "Opening Date: " + this.openingDate.formatedData() + "\n" +
     "Holder: " + this.holder + "\n" +
     "Balance: " + this.balance + "\n" +
-    "Type: " + this.getType();
+    "Type: " + this.getType() + "\n";
     return data;
   }
 

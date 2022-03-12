@@ -38,6 +38,11 @@ public class CollectionsTest {
 
         System.out.println(myAccounts);
 
+        System.out.println("Reverse");
+        Collections.reverse(myAccounts);
+
+        System.out.println(myAccounts);
+
 
 
     }
