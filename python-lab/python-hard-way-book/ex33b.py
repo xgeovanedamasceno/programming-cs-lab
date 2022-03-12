@@ -7,6 +7,7 @@ def create_list_of_numbers(max, increment):
 
       print(f"before increment {i}")
 
+ 
       i = i + increment
       
       print(f"after increment {i}")
