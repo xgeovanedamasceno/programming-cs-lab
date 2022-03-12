@@ -1,4 +1,4 @@
-package oop.collections;
+package oop.collections.list;
 
 import oop.model.Account;
 import oop.model.CheckingAccount;
