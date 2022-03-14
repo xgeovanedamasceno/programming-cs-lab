@@ -64,20 +64,7 @@ public class TestList {
 
         System.out.println(primeList.isEmpty());
 
-        /*Iterator<Double> newIterator = primeList.iterator();
 
-        while (newIterator.hasNext()) {
-            System.out.println(newIterator.next());
-        }
-
-        primeList.remove(3);
-
-
-        System.out.println(primeList);
-
-        while (newIterator.hasNext()) {
-            System.out.println(newIterator.next());
-        }*/
 
 
         System.out.println();
