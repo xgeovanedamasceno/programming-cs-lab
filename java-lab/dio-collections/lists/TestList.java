@@ -1,5 +1,6 @@
 package diocollection.lists;
 
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class TestList {
@@ -64,23 +65,16 @@ public class TestList {
 
         System.out.println(primeList.isEmpty());
 
-        /*Iterator<Double> newIterator = primeList.iterator();
+        System.out.println();
 
-        while (newIterator.hasNext()) {
-            System.out.println(newIterator.next());
-        }
-
-        primeList.remove(3);
-
-
+        Collections.shuffle(primeList);
+        System.out.println("List Shuffled:");
         System.out.println(primeList);
 
-        while (newIterator.hasNext()) {
-            System.out.println(newIterator.next());
-        }*/
-
-
         System.out.println();
+        System.out.println("List Sorted:");
+        Collections.sort(primeList);
+        System.out.println(primeList);
 
 
 
