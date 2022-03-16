@@ -47,10 +47,6 @@ public class ListOfTemperature {
         }
 
         System.out.println();
-
-
-
-
         System.out.println(temperatures);
 
 
