@@ -12,5 +12,10 @@ uma pessoa sobre um crime. As perguntas são:
 - devia para a vítima?
 - trabalhou com a vítima?
 
+Se a pessoa responder positivamente a 2 questões ela deve ser
+classificada como "suspeita", entre 3 e 4 como "cúmplice"
+e 5 como assassina. Caso contrário, inocente.
+
+
 
 
