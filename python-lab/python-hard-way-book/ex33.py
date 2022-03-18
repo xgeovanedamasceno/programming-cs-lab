@@ -1,5 +1,3 @@
-
-
 def create_list_of_numbers(max, increment):
   i = 0
   numbers = []
@@ -7,7 +5,8 @@ def create_list_of_numbers(max, increment):
   while i < max:
     print(f"At the top i is {i}")
     numbers.append(i)
-
+    
+    
     i = i + increment
 
     print("Numbers now: ", numbers)
@@ -15,7 +14,7 @@ def create_list_of_numbers(max, increment):
   
   return numbers
 
-numbers = create_list_of_numbers(10,2)
+numbers = create_list_of_numbers(6,1)
 
 print("The numbers: ")
 

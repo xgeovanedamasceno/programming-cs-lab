@@ -54,3 +54,6 @@ Installing collected packages: decorator, wcwidth, prompt-toolkit, pickleshare, 
   WARNING: The script ipdb3 is installed in '/home/xgeo/.local/bin' which is not on PATH.
   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
 Successfully installed asttokens-2.0.5 backcall-0.2.0 decorator-5.1.1 executing-0.8.3 ipdb-0.13.9 ipython-8.1.1 jedi-0.18.1 matplotlib-inline-0.1.3 parso-0.8.3 pickleshare-0.7.5 prompt-toolkit-3.0.28 pure-eval-0.2.2 pygments-2.11.2 stack-data-0.2.0 toml-0.10.2 traitlets-5.1.1 wcwidth-0.2.5
+
+How to add a path of a program to $PATH enviroment variable?
+https://askubuntu.com/questions/109381/how-to-add-path-of-a-program-to-path-environment-variable
