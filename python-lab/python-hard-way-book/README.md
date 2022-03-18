@@ -50,3 +50,6 @@ By default from_what argument is set to 0.
 **Note:** Reference point at current position / end of file cannot be set in text mode except when offset is equal to 0.
 
 **from:** https://www.geeksforgeeks.org/python-seek-function/
+
+## 5. Symbol Review
+
