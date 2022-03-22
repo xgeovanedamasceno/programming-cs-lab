@@ -91,3 +91,17 @@ Infinity
             sum += temperature.getTemperature();
         }
 ```
+
+## 5. Iterator reference
+
+```
+        Iterator<Double> iterator = primeList.iterator();
+
+        Double sum = 0d;
+        while(iterator.hasNext()) {
+            Double next = iterator.next();
+            System.out.println(next);
+            sum += next;
+        }
+```
+
