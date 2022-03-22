@@ -79,3 +79,15 @@ float divisionByZero = 2 / 0.0
 ```
 
 Infinity
+
+## 4. ForEach vs iterator (?)
+
+```
+        /*temperatures.forEach(temperature -> {
+            sum += temperature.getTemperature();
+        });*/
+
+        for (Temperature temperature : temperatures) {
+            sum += temperature.getTemperature();
+        }
+```
