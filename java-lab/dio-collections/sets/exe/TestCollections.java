@@ -23,16 +23,15 @@ public class TestCollections {
         for (String color : colors) {
             if (color.startsWith("B")) {
                 System.out.println(color);
-                /*colors.remove(color);*/
             }
         }
 
         //2
-        for (String color : colors) {
+      /*for (String color : colors) {
             if (color.startsWith("B")) {
                 colors.remove(color);
             }
-        }
+        }*/
 
         //3
         Iterator<String> iterator = colors.iterator();
