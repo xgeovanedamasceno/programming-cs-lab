@@ -34,7 +34,7 @@ public class TestCollections {
         }*/
 
         //3
-        /*Iterator<String> iterator = colors.iterator();
+        /*terator<String> iterator = colors.iterator();
         while (iterator.hasNext()) {
             if (iterator.next().startsWith("B")) iterator.remove();
         }
