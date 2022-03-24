@@ -34,10 +34,14 @@ public class TestCollections {
         }*/
 
         //3
-        Iterator<String> iterator = colors.iterator();
+        /*terator<String> iterator = colors.iterator();
         while (iterator.hasNext()) {
             if (iterator.next().startsWith("B")) iterator.remove();
         }
+        System.out.println(colors);*/
+
+        System.out.println(colors);
+        colors.removeIf(color -> color.startsWith("B"));
         System.out.println(colors);
     }
 }
