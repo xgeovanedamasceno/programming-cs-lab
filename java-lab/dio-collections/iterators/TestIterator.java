@@ -1,4 +1,4 @@
-package diocollection;
+package diocollection.iterators;
 
 import java.util.ArrayList;
 import java.util.Iterator;
