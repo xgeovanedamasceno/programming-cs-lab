@@ -6,12 +6,12 @@ public class Main {
 
         x = 456;
 
-        class MyClass {
+        /*class MyClass {
             void doSomething() {
                 System.out.println(x);
             }
         }
 
-        new MyClass().doSomething();
+        new MyClass().doSomething();*/
     }
 }
