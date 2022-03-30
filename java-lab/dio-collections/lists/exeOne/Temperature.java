@@ -1,4 +1,4 @@
-package diocollection.lists.exe;
+package diocollection.lists.exeOne;
 
 public class Temperature {
     Double temperature;
