@@ -12,12 +12,12 @@ classificada como "suspeita", entre 3 e 4 como "cúmplice"
 e 5 como assassina. Caso contrário, inocente.*/
 package diocollection.lists.exeTwo;
 
-import java.io.BufferedReader;
+
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Questions {
     public static void main(String[] args) throws IOException {
@@ -31,18 +31,22 @@ public class Questions {
 
         int answersCounter = 0;
 
-        InputStream inputStream = System.in;
-        InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        Scanner input = new Scanner(System.in);
         String answer;
 
-
+        System.out.println("To answer say 'yes' or 'no':");
+        System.out.println();
         for (int i = 0; i < questions.size(); i++) {
             System.out.println(questions.get(i));
-            do {
-                answer = bufferedReader.readLine();
-                System.out.println(answer);
-            } while (answer != null);
+            answer = input.nextLine();
+
+            if (answer.equals("yes")) answersCounter++;
         }
+
+
+
+        if (answersCounter == 2) System.out.println("suspicious");
+        if (answersCounter >= 3 && answersCounter < 5) System.out.println("accomplice");
+        if (answersCounter == 5) System.out.println("guilty");
     }
 }
