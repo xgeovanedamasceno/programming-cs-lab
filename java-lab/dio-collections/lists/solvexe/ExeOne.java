@@ -4,7 +4,7 @@ Após isto, calcule a média semestral das temperaturas e mostre todas as temper
 e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro e etc).
 */
 
-package diocollection.lists.solpropOne;
+package diocollection.lists.solvexe;
 
 import java.util.ArrayList;
 import java.util.Iterator;
