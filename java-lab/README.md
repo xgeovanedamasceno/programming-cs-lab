@@ -105,3 +105,6 @@ Infinity
         }
 ```
 
+## 6. Collection vs Colletions
+
+discussion: https://pt.stackoverflow.com/questions/34605/quais-tipos-de-cole%C3%A7%C3%B5es-e-suas-diferen%C3%A7as-em-java#:~:text=Collection%20)%3A%20Que%20%C3%A9%20uma,usados%20com%20subclasses%20de%20Collection%20.
