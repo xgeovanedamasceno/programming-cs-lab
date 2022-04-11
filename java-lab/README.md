@@ -80,6 +80,7 @@ float divisionByZero = 2 / 0.0
 
 Infinity
 
+
 ## 4. ForEach vs iterator (?)
 
 ```
@@ -109,6 +110,7 @@ Infinity
 
 discussion: https://pt.stackoverflow.com/questions/34605/quais-tipos-de-cole%C3%A7%C3%B5es-e-suas-diferen%C3%A7as-em-java#:~:text=Collection%20)%3A%20Que%20%C3%A9%20uma,usados%20com%20subclasses%20de%20Collection%20.
 
+
 ## 7.Map.Entry interface
 
 - Map.Entry<K,V> is a static interface that stores both key and value together in one structure.
@@ -116,8 +118,11 @@ discussion: https://pt.stackoverflow.com/questions/34605/quais-tipos-de-cole%C3%
 - Map.entrySet is an alternative to iterating over map's keys.
 - The objects of a Map.Entry class are valid only for the duration of the iteration. 
 
+
 ## 8. Map interface vs Map.Entry interface
 
 - The diference is that map interface describes a data structure that stores key and values entries. The Map.Entry interface describes the structure of these entries, stores and provides a way of retrieving the associated key and value.
 
 https://stackoverflow.com/questions/39065527/difference-between-map-and-map-entryk-v-interface
+
+## 9. Comparator vs Comparable
