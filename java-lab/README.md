@@ -121,8 +121,18 @@ discussion: https://pt.stackoverflow.com/questions/34605/quais-tipos-de-cole%C3%
 
 ## 8. Map interface vs Map.Entry interface
 
-- The diference is that map interface describes a data structure that stores key and values entries. The Map.Entry interface describes the structure of these entries, stores and provides a way of retrieving the associated key and value.
+The diference is that map interface describes a data structure that stores key and values entries. The Map.Entry interface describes the structure of these entries, stores and provides a way of retrieving the associated key and value.
 
 https://stackoverflow.com/questions/39065527/difference-between-map-and-map-entryk-v-interface
 
+
 ## 9. Comparator vs Comparable
+
+Comparable interface: 
+- a comparable object is capable of comparing itself with another object.
+
+Comparator interface: 
+- comparator is external to the element that is comparing. It's a separate class.
+- Is necessary to create multiple separate classes that implements Comparator to compare by diffrent members.
+
+-
