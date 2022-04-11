@@ -1,5 +1,6 @@
 package diocollection.comparers;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -17,6 +18,23 @@ public class TestComparable {
         Collections.sort(listMovies);
 
         System.out.println("After sorting:");
+
+        listMovies.forEach(movie -> System.out.println(movie));
+
+        System.out.println();
+        System.out.println();
+        System.out.println("Sorted by rating: ");
+
+        Collections.sort(listMovies, new RatingCompare());
+
+        for (Movie listMovie : listMovies) {
+            System.out.println(listMovie);
+        }
+
+        System.out.println();
+        System.out.println();
+        System.out.println("Name Compare");
+        Collections.sort(listMovies, new NameCompare());
 
         listMovies.forEach(movie -> System.out.println(movie));
     }
