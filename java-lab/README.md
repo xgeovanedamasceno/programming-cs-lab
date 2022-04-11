@@ -130,9 +130,17 @@ https://stackoverflow.com/questions/39065527/difference-between-map-and-map-entr
 
 Comparable interface: 
 - a comparable object is capable of comparing itself with another object.
+- is meant for objects with natural ordering which means the object itself must know it is to be ordered.
+- it compares "this" reference with the object specified.
+- any class that implements Comparable can be sorted automatically by using Collections.sort() or Arrays.sort() method and objects will be sorted based on there natural order defined by CompareTo method.
+- it allows only one comparison.
 
 Comparator interface: 
-- comparator is external to the element that is comparing. It's a separate class.
-- Is necessary to create multiple separate classes that implements Comparator to compare by diffrent members.
+- it's a separate class.
+- comparator is external to the element that is comparing.
+- is necessary to create multiple separate classes that implements Comparator to compare by diffrent members.
+- sort is done through a separate class.
+- it compares two diffrent class objects provided.
+- it's possible to create customs comparators for a given type.
 
--
+https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/
