@@ -8,10 +8,10 @@ public class Main {
         System.out.println("HashMap");
         Map<String, Book> myBooks = new HashMap<>();
 
-        myBooks.put("Chatein", new Book("Cortina azul", 144));
-        myBooks.put("Beirhs", new Book("O caminho do começo", 144));
+        myBooks.put("Chatein", new Book("Cortina azul", 639));
+        myBooks.put("Beirhs", new Book("O caminho do começo", 458));
         myBooks.put("Amroin", new Book("Morena Simpatica", 144));
-        myBooks.put("Birhs", new Book("Zoroalto", 144));
+        myBooks.put("Birhs", new Book("Zoroalto", 99));
 
 
         for (Map.Entry<String, Book> book : myBooks.entrySet()) {
@@ -57,11 +57,11 @@ public class Main {
         Set<Map.Entry<String, Book>> pagesBook = new TreeSet<>(new ComparatorPages());
         pagesBook.addAll(myBooks.entrySet());
 
-        System.out.println(pagesBook);
 
-        /*for (Map.Entry<String, Book> bz: pagesBook) {
+
+        for (Map.Entry<String, Book> bz: pagesBook) {
             System.out.println(bz.getKey() + " -> " + bz.getValue());
-        }*/
+        }
 
 
 
