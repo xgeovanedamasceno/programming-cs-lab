@@ -165,3 +165,7 @@ states.putAll(temp);
 ```
 
 from: https://stackoverflow.com/questions/27753184/java-hashmap-add-new-entry-while-iterating#:~:text=How%20to%20add%20new%20entry%20while%20iterating%3F&text=Create%20a%20new%20Map%3CString,by%20using%20map%20%3D%20foo%3B%20.
+
++++: https://www.geeksforgeeks.org/how-to-check-if-a-key-exists-in-a-hashmap-in-java/
+
+erro de lógica no código acima.
