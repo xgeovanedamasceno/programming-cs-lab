@@ -144,3 +144,24 @@ Comparator interface:
 - it's possible to create customs comparators for a given type.
 
 https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/
+
+## 10. How to add a new element while iterating over a map
+
+*You need to consider what it means to put a value to a Map whilst iterating. HashMap defines no order over which its entries will be iterated over. So when you put a new entry, should the entry be returned by the iterator later or not. Consistency of behaviour is important. However, whichever way you decide you'll get inconsistent behaviour when you put a new value to a preexisting key. If the key has already been iterated over then the change won't appear and will appear if the key has yet to be produced by the iterator.
+
+*A simple way to overcome this problem is to create a temporary Map of the new key-value pairs and add the temporary Map to the main Map at the end of your iteration.
+
+```
+Map<String, Integer> states = new HashMap<>(); // original map
+
+Map<String, Integer> temp =  new HashMap<>();
+for (Map.Entry<String, Integer> entry : states.entrySet()) {
+    if(!entry.getKey().equalsIgnoreCase("PB")) {
+        StateFederal pb = new StateFederal("Paraíba", "PB", 4039277);
+        temp.put(pb.getInitials(), pb.getPopulation());
+    }
+}
+states.putAll(temp);
+```
+
+from: https://stackoverflow.com/questions/27753184/java-hashmap-add-new-entry-while-iterating#:~:text=How%20to%20add%20new%20entry%20while%20iterating%3F&text=Create%20a%20new%20Map%3CString,by%20using%20map%20%3D%20foo%3B%20.
