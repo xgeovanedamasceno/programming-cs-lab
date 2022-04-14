@@ -1,4 +1,15 @@
 names = ("Jonh", "Mary", "Patrick")
 ages = (17, 23, 34)
 
-print(zip(names, ages))
+zipped = zip(names, ages)
+
+#print(tuple(zipped))
+
+lipped = zip(names, ages)
+
+#print(list(lipped))
+
+for(x,y) in lipped:
+    print(x,y)
+
+
