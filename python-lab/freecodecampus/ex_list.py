@@ -48,3 +48,33 @@ list_a[len(list_a):] = list_b
 print('list_a =', list_a)
 
 
+#combining arrays using the + operator
+odd = [1,3,5,7]
+even = [2,4,6,8]
+
+odd += even
+
+print("odd and even combined= ", odd)
+
+# filling an empty list with for and append
+
+# Return area of square
+# Area of square = length x length
+def square_area(side_length):
+    result = []
+    for length in side_length:
+        result.append(length*length)
+    return result
+
+lengths = [1,4,9,20]
+print(square_area(lengths))
+
+# filling an empty list using list comprehension
+
+def xsquare_area(side_length):
+    return [length*length for length in side_length]
+
+xlengths = [1,4,9,20]
+print(xsquare_area(xlengths))
+
+# append() vs insert() vs extend()
