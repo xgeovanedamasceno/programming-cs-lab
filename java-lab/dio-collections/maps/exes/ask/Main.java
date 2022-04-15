@@ -1,6 +1,7 @@
 package diocollection.maps.exes.ask;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Main {
@@ -18,11 +19,11 @@ public class Main {
 
         Map<String, Integer> temp = new HashMap<>();
         for (Map.Entry<String, Integer> entry : personsMap.entrySet()) {
-            if (!entry.getKey().equalsIgnoreCase("Maria")) {
+            if (entry.getKey().equalsIgnoreCase("Mateus")) {
+                entry.setValue(25);
+            } else {
                 Person px = new Person("Mateus", 25);
                 temp.put(px.getName(), px.getAge());
-            } else {
-                entry.setValue(25);
             }
         }
 
