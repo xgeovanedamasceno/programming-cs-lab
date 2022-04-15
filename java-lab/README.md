@@ -152,16 +152,20 @@ https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/
 *A simple way to overcome this problem is to create a temporary Map of the new key-value pairs and add the temporary Map to the main Map at the end of your iteration.
 
 ```
-Map<String, Integer> states = new HashMap<>(); // original map
+Map<String, Integer> personsMap = new HashMap<>(); // original map
 
-Map<String, Integer> temp =  new HashMap<>();
-for (Map.Entry<String, Integer> entry : states.entrySet()) {
-    if(!entry.getKey().equalsIgnoreCase("PB")) {
-        StateFederal pb = new StateFederal("Paraíba", "PB", 4039277);
-        temp.put(pb.getInitials(), pb.getPopulation());
+Map<String, Integer> temp = new HashMap<>();
+
+for (Map.Entry<String, Integer> entry : personsMap.entrySet()) {
+    if (entry.getKey().equalsIgnoreCase("Mateus")) {
+        entry.setValue(25);
+    } else {
+        Person px = new Person("Mateus", 25);
+        temp.put(px.getName(), px.getAge());
     }
 }
-states.putAll(temp);
+
+personsMap.putAll(temp);
 ```
 
 from: https://stackoverflow.com/questions/27753184/java-hashmap-add-new-entry-while-iterating#:~:text=How%20to%20add%20new%20entry%20while%20iterating%3F&text=Create%20a%20new%20Map%3CString,by%20using%20map%20%3D%20foo%3B%20.
