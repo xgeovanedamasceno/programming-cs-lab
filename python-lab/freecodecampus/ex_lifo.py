@@ -29,6 +29,7 @@ stack.push(99)
 # Print Stack
 print(stack)
 
+
 # Find the length of the stack
 print("Length of stack is: ", len(stack))
 
