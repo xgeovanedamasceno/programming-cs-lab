@@ -1,7 +1,6 @@
 package diocollection.maps.exes;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -55,6 +54,41 @@ public class Main {
         System.out.println(states);
 
         System.out.println();
+
+        FederalState sx = new FederalState("Pernambuco", "PE", 3512563);
+        states.put(sx.getInitials(), sx.getPopulation());
+
+        System.out.println();
+        System.out.println("Add or update an element");
+        System.out.println(states);
+
+
+        System.out.println();
+        System.out.println("Show the population of PE");
+        Integer population = states.get("PE");
+        System.out.println(population);
+
+        System.out.println();
+        System.out.println("Priting Key and Value");
+         for (Map.Entry<String, Integer> statesEntry : states.entrySet()) {
+             System.out.println("Key: " + statesEntry.getKey() + " - Value: " + statesEntry.getValue() );
+         }
+
+        System.out.println();
+        System.out.println("Insertion Order");
+        Map<String, Integer> statesLink = new LinkedHashMap<>(states);
+        System.out.println(statesLink);
+
+        System.out.println();
+        System.out.println("Alphab order");
+        Map<String, Integer> statesTree = new TreeMap<>(states);
+        System.out.println(statesTree);
+
+        System.out.println();
+        System.out.println("Show the State with less population");
+
+
+
 
 
 
