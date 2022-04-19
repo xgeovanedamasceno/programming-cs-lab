@@ -3,7 +3,7 @@ package diocollection.maps.exes;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FederalState {
+public class FederalState implements Comparable<FederalState>{
     private String name;
     private String initials;
     private Integer population;
@@ -45,5 +45,10 @@ public class FederalState {
 
     public void addCitie(String city) {
         this.cities.add(city);
+    }
+
+    @Override
+    public int compareTo(FederalState federalState) {
+        return Integer.compare(this.getPopulation(), federalState.getPopulation());
     }
 }
