@@ -173,3 +173,9 @@ from: https://stackoverflow.com/questions/27753184/java-hashmap-add-new-entry-wh
 +++: https://www.geeksforgeeks.org/how-to-check-if-a-key-exists-in-a-hashmap-in-java/
 
 erro de lógica no código acima.
+
+## 11. Diference between a variable and an object
+
+- Uma variável é um espaço de memória.
+- Um objeto é uma estrutura de código que representa um elemento ou um componente.
+- Um objeto é uma representação do mundo real.
