@@ -132,6 +132,7 @@ Infinity
   - This class works better when the application demands storing the data and accessing it.
 
 - LinkedList
+
   - This class uses a doubly linked list to store the elements in it.
   - It supports the storage of all types of objects.
   - Manipulating LinkedList takes less time compared to ArrayList because, in doubly-linked list,
@@ -165,7 +166,36 @@ Infinity
     - LinkedHashSet also allow maximum one null element.
 
   - TreeSet
+
     - TreeSet internally uses TreeMap to store its elements.
     - The TreeSet maintains default natural sorting order.
     - The TreeSet gives less performance than HashSet and LinkedHashSet.
     - The TreeSet doesn't allow even single element.
+
+## Java Map
+
+- Interface Map
+
+  - Elementos únicos (key) para cada valor (value).
+  - Implementações: HashTable, HashMap, LinkedHashMap e TreeMap
+
+  - HashMap
+
+    - Time Complexity:
+      - O(1)
+    - Iteration Order:
+      - Random
+
+  - LinkedHashMap
+    - Time Complexity:
+      - O(1)
+    - Iteration Order:
+      - sorted according to either insertion order or access order (as specified during construction).
+  - TreeMap
+
+    - Time Complexity
+      - O(log n)
+      - sorted according to either insertion order or access order (as specified during construction).
+
+  - Iteration Order:
+    - Random
