@@ -105,3 +105,35 @@ Infinity
         }
 ```
 
+## 6. Collection
+
+- Collection é um objeto que agrupa múltiplos elementos dentro de uma unidade e serve para armazenar e processar conjunto de dados de forma eficiente.
+
+- Interface List
+
+  - Implementações: ArrayList, LinkedList e Vector
+
+- Interface Queue
+
+  - Implementações: LinkedList e PriorityQueue
+
+- ArrayList
+
+  - This class uses a dynamic array to store the elements in it.
+  - With the introduction of **generics**, this class supports the storage of
+    all types of objects
+  - Performance:
+    - Manipulating ArrayList takes more time due to the internal implementation. Whenever
+      we remove an element, internally, the array is transversed and the memory bits are
+      shifted.
+  - This class implements List interface. Therefore, this acts as a list.
+  - This class works better when the application demands storing the data and accessing it.
+
+- LinkedList
+  - This class uses a doubly linked list to store the elements in it.
+  - It supports the storage of all types of objects.
+  - Manipulating LinkedList takes less time compared to ArrayList because, in doubly-linked list,
+    there is no concept of shifting the memory bits.
+    - The list is transversed and the reference link is changed.
+  - This class implements both the List Interface and Deque interface. Therefore, it can acts as a list and a dequeue.
+  - This class works better when the application demands manipulation of the store data.
