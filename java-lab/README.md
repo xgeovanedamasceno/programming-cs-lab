@@ -177,3 +177,10 @@ erro de lógica no código acima.
 - Uma variável é um espaço de memória.
 - Um objeto é uma estrutura de código que representa um elemento ou um componente.
 - Um objeto é uma representação do mundo real.
+
+## 12. List of links to check
+
+- [ ] https://www.devmedia.com.br/java-streams-api-manipulando-colecoes-de-forma-eficiente/37630
+- [ ] https://www.oracle.com/br/technical-resources/articles/java-stream-api.html
+- [ ] https://www.alura.com.br/artigos/streams-e-datas-para-os-desafios-do-dia-a-dia-no-java-8?gclid=CjwKCAjw7IeUBhBbEiwADhiEMTRQX8EtDdI8S_obDlxsqzYdw89xz5g5AQnK__tjDjK7wv8iZjNYshoCI5MQAvD_BwE
+- [ ]
