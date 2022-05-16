@@ -109,6 +109,8 @@ Infinity
 
 - Collection é um objeto que agrupa múltiplos elementos dentro de uma unidade e serve para armazenar e processar conjunto de dados de forma eficiente.
 
+## 7. Java List
+
 - Interface List
 
   - Implementações: ArrayList, LinkedList e Vector
@@ -137,3 +139,33 @@ Infinity
     - The list is transversed and the reference link is changed.
   - This class implements both the List Interface and Deque interface. Therefore, it can acts as a list and a dequeue.
   - This class works better when the application demands manipulation of the store data.
+
+## 8. Java Set
+
+- Interface Set
+
+  - Não permite elementos duplicados
+  - Não possui índice
+  - Implementações:
+
+    - HashSet, LinkedHashSet e TreeSet
+
+  - HashSet
+
+    - HashSet internally uses HashMap to store its elements.
+    - It doesn't maintain any order of elements.
+    - HashSet gives better performance than LinkedHashSet and TreeSet.
+    - HashSet allow maximum one null element.
+
+  - LinkedHashSet
+
+    - LinkedHashSet internally uses LinkedHashMap to store its elements.
+    - LinkedHashSet maintain insertion order of elements.
+    - The performance of LinkedHashSet is between HashSet and TreeSet.
+    - LinkedHashSet also allow maximum one null element.
+
+  - TreeSet
+    - TreeSet internally uses TreeMap to store its elements.
+    - The TreeSet maintains default natural sorting order.
+    - The TreeSet gives less performance than HashSet and LinkedHashSet.
+    - The TreeSet doesn't allow even single element.
