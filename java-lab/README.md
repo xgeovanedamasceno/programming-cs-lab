@@ -226,3 +226,24 @@ Infinity
 
 - 5. Streams API
   - Nova opção para a manipulação de coleções seguindo os princípios da programação funcional.
+
+### Review
+
+- Interfaces que estendem diretamente da interface Collection:
+
+  - List, Set e Queue
+
+- Map
+
+  - é possível ordernar um map pelo valor
+
+- Principal característica da interface List
+
+  - permite adicionar elementos duplicados e garante a ordem de inserção.
+
+- método map()
+
+  - permite converter cada elemento de uma coleção em um outro objeto conforme definição
+
+- Map.put()
+  - permite atualizar adicionar e atualizar um elemento em um Map
