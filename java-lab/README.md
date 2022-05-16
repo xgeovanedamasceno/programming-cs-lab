@@ -172,7 +172,7 @@ Infinity
     - The TreeSet gives less performance than HashSet and LinkedHashSet.
     - The TreeSet doesn't allow even single element.
 
-## Java Map
+## 9. Java Map
 
 - Interface Map
 
@@ -199,3 +199,30 @@ Infinity
 
   - Iteration Order:
     - Random
+
+## 10. Java Streams
+
+- 1. Classe Anônima
+
+  - Uma classe que não recebeu nome e é declarado e instanciado em uma única instrução
+
+- 2. Functional Interface
+
+  - Qualquer interface com SAM (Single Abstract Method)
+  - As implementações são tratadas como expressões lambda
+    - Comparator
+    - Consumer
+    - Function
+    - Predicate
+
+- 3. Lambda
+
+  - Uma função sem declaração.
+  - Em uma função lambda não é necessário colocar um nome, o tipo de retorno e o modificador de acesso.
+
+- 4. Reference Method
+
+  - Novo recurso do Java 8 que permite fazer referência a um método ou construtor de uma classe de forma funcional.
+
+- 5. Streams API
+  - Nova opção para a manipulação de coleções seguindo os princípios da programação funcional.
