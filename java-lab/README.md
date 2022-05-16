@@ -80,7 +80,6 @@ float divisionByZero = 2 / 0.0
 
 Infinity
 
-
 ## 4. ForEach vs iterator (?)
 
 ```
@@ -110,14 +109,12 @@ Infinity
 
 discussion: https://pt.stackoverflow.com/questions/34605/quais-tipos-de-cole%C3%A7%C3%B5es-e-suas-diferen%C3%A7as-em-java#:~:text=Collection%20)%3A%20Que%20%C3%A9%20uma,usados%20com%20subclasses%20de%20Collection%20.
 
-
 ## 7.Map.Entry interface
 
 - Map.Entry<K,V> is a static interface that stores both key and value together in one structure.
 - It allows to get both elements (key and value) in a single operation.
 - Map.entrySet is an alternative to iterating over map's keys.
-- The objects of a Map.Entry class are valid only for the duration of the iteration. 
-
+- The objects of a Map.Entry class are valid only for the duration of the iteration.
 
 ## 8. Map interface vs Map.Entry interface
 
@@ -125,17 +122,18 @@ The diference is that map interface describes a data structure that stores key a
 
 https://stackoverflow.com/questions/39065527/difference-between-map-and-map-entryk-v-interface
 
-
 ## 9. Comparator vs Comparable
 
-Comparable interface: 
+Comparable interface:
+
 - a comparable object is capable of comparing itself with another object.
 - is meant for objects with natural ordering which means the object itself must know it is to be ordered.
 - it compares "this" reference with the object specified.
 - any class that implements Comparable can be sorted automatically by using Collections.sort() or Arrays.sort() method and objects will be sorted based on there natural order defined by CompareTo method.
 - it allows only one comparison.
 
-Comparator interface: 
+Comparator interface:
+
 - it's a separate class.
 - comparator is external to the element that is comparing.
 - is necessary to create multiple separate classes that implements Comparator to compare by diffrent members.
@@ -147,9 +145,9 @@ https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/
 
 ## 10. How to add a new element while iterating over a map
 
-*You need to consider what it means to put a value to a Map whilst iterating. HashMap defines no order over which its entries will be iterated over. So when you put a new entry, should the entry be returned by the iterator later or not. Consistency of behaviour is important. However, whichever way you decide you'll get inconsistent behaviour when you put a new value to a preexisting key. If the key has already been iterated over then the change won't appear and will appear if the key has yet to be produced by the iterator.
+\*You need to consider what it means to put a value to a Map whilst iterating. HashMap defines no order over which its entries will be iterated over. So when you put a new entry, should the entry be returned by the iterator later or not. Consistency of behaviour is important. However, whichever way you decide you'll get inconsistent behaviour when you put a new value to a preexisting key. If the key has already been iterated over then the change won't appear and will appear if the key has yet to be produced by the iterator.
 
-*A simple way to overcome this problem is to create a temporary Map of the new key-value pairs and add the temporary Map to the main Map at the end of your iteration.
+\*A simple way to overcome this problem is to create a temporary Map of the new key-value pairs and add the temporary Map to the main Map at the end of your iteration.
 
 ```
 Map<String, Integer> personsMap = new HashMap<>(); // original map
