@@ -105,149 +105,6 @@ Infinity
         }
 ```
 
-## 6. Collection
-
-- Collection é um objeto que agrupa múltiplos elementos dentro de uma unidade e serve para armazenar e processar conjunto de dados de forma eficiente.
-
-## 7. Java List
-
-- Interface List
-
-  - Implementações: ArrayList, LinkedList e Vector
-
-- Interface Queue
-
-  - Implementações: LinkedList e PriorityQueue
-
-- ArrayList
-
-  - This class uses a dynamic array to store the elements in it.
-  - With the introduction of **generics**, this class supports the storage of
-    all types of objects
-  - Performance:
-    - Manipulating ArrayList takes more time due to the internal implementation. Whenever
-      we remove an element, internally, the array is transversed and the memory bits are
-      shifted.
-  - This class implements List interface. Therefore, this acts as a list.
-  - This class works better when the application demands storing the data and accessing it.
-
-- LinkedList
-
-  - This class uses a doubly linked list to store the elements in it.
-  - It supports the storage of all types of objects.
-  - Manipulating LinkedList takes less time compared to ArrayList because, in doubly-linked list,
-    there is no concept of shifting the memory bits.
-    - The list is transversed and the reference link is changed.
-  - This class implements both the List Interface and Deque interface. Therefore, it can acts as a list and a dequeue.
-  - This class works better when the application demands manipulation of the store data.
-
-## 8. Java Set
-
-- Interface Set
-
-  - Não permite elementos duplicados
-  - Não possui índice
-  - Implementações:
-
-    - HashSet, LinkedHashSet e TreeSet
-
-  - HashSet
-
-    - HashSet internally uses HashMap to store its elements.
-    - It doesn't maintain any order of elements.
-    - HashSet gives better performance than LinkedHashSet and TreeSet.
-    - HashSet allow maximum one null element.
-
-  - LinkedHashSet
-
-    - LinkedHashSet internally uses LinkedHashMap to store its elements.
-    - LinkedHashSet maintain insertion order of elements.
-    - The performance of LinkedHashSet is between HashSet and TreeSet.
-    - LinkedHashSet also allow maximum one null element.
-
-  - TreeSet
-
-    - TreeSet internally uses TreeMap to store its elements.
-    - The TreeSet maintains default natural sorting order.
-    - The TreeSet gives less performance than HashSet and LinkedHashSet.
-    - The TreeSet doesn't allow even single element.
-
-## 9. Java Map
-
-- Interface Map
-
-  - Elementos únicos (key) para cada valor (value).
-  - Implementações: HashTable, HashMap, LinkedHashMap e TreeMap
-
-  - HashMap
-
-    - Time Complexity:
-      - O(1)
-    - Iteration Order:
-      - Random
-
-  - LinkedHashMap
-    - Time Complexity:
-      - O(1)
-    - Iteration Order:
-      - sorted according to either insertion order or access order (as specified during construction).
-  - TreeMap
-
-    - Time Complexity
-      - O(log n)
-      - sorted according to either insertion order or access order (as specified during construction).
-
-  - Iteration Order:
-    - Random
-
-## 10. Java Streams
-
-- 1. Classe Anônima
-
-  - Uma classe que não recebeu nome e é declarado e instanciado em uma única instrução
-
-- 2. Functional Interface
-
-  - Qualquer interface com SAM (Single Abstract Method)
-  - As implementações são tratadas como expressões lambda
-    - Comparator
-    - Consumer
-    - Function
-    - Predicate
-
-- 3. Lambda
-
-  - Uma função sem declaração.
-  - Em uma função lambda não é necessário colocar um nome, o tipo de retorno e o modificador de acesso.
-
-- 4. Reference Method
-
-  - Novo recurso do Java 8 que permite fazer referência a um método ou construtor de uma classe de forma funcional.
-
-- 5. Streams API
-  - Nova opção para a manipulação de coleções seguindo os princípios da programação funcional.
-
-### Review
-
-- Interfaces que estendem diretamente da interface Collection:
-
-  - List, Set e Queue
-
-- Map
-
-  - é possível ordernar um map pelo valor
-
-- Principal característica da interface List
-
-  - permite adicionar elementos duplicados e garante a ordem de inserção.
-
-- método map()
-
-  - permite converter cada elemento de uma coleção em um outro objeto conforme definição
-
-- Map.put()
-  - permite atualizar adicionar e atualizar um elemento em um Map
-=======
 ## 6. Collection vs Colletions
 
 discussion: https://pt.stackoverflow.com/questions/34605/quais-tipos-de-cole%C3%A7%C3%B5es-e-suas-diferen%C3%A7as-em-java#:~:text=Collection%20)%3A%20Que%20%C3%A9%20uma,usados%20com%20subclasses%20de%20Collection%20.
@@ -326,4 +183,147 @@ erro de lógica no código acima.
 - [ ] https://www.devmedia.com.br/java-streams-api-manipulando-colecoes-de-forma-eficiente/37630
 - [ ] https://www.oracle.com/br/technical-resources/articles/java-stream-api.html
 - [ ] https://www.alura.com.br/artigos/streams-e-datas-para-os-desafios-do-dia-a-dia-no-java-8?gclid=CjwKCAjw7IeUBhBbEiwADhiEMTRQX8EtDdI8S_obDlxsqzYdw89xz5g5AQnK__tjDjK7wv8iZjNYshoCI5MQAvD_BwE
-- [ ]
+
+
+## 13. Collection
+
+- Collection é um objeto que agrupa múltiplos elementos dentro de uma unidade e serve para armazenar e processar conjunto de dados de forma eficiente.
+
+## 14. Java List
+
+- Interface List
+
+  - Implementações: ArrayList, LinkedList e Vector
+
+- Interface Queue
+
+  - Implementações: LinkedList e PriorityQueue
+
+- ArrayList
+
+  - This class uses a dynamic array to store the elements in it.
+  - With the introduction of **generics**, this class supports the storage of
+    all types of objects
+  - Performance:
+    - Manipulating ArrayList takes more time due to the internal implementation. Whenever
+      we remove an element, internally, the array is transversed and the memory bits are
+      shifted.
+  - This class implements List interface. Therefore, this acts as a list.
+  - This class works better when the application demands storing the data and accessing it.
+
+- LinkedList
+
+  - This class uses a doubly linked list to store the elements in it.
+  - It supports the storage of all types of objects.
+  - Manipulating LinkedList takes less time compared to ArrayList because, in doubly-linked list,
+    there is no concept of shifting the memory bits.
+    - The list is transversed and the reference link is changed.
+  - This class implements both the List Interface and Deque interface. Therefore, it can acts as a list and a dequeue.
+  - This class works better when the application demands manipulation of the store data.
+
+## 15. Java Set
+
+- Interface Set
+
+  - Não permite elementos duplicados
+  - Não possui índice
+  - Implementações:
+
+    - HashSet, LinkedHashSet e TreeSet
+
+  - HashSet
+
+    - HashSet internally uses HashMap to store its elements.
+    - It doesn't maintain any order of elements.
+    - HashSet gives better performance than LinkedHashSet and TreeSet.
+    - HashSet allow maximum one null element.
+
+  - LinkedHashSet
+
+    - LinkedHashSet internally uses LinkedHashMap to store its elements.
+    - LinkedHashSet maintain insertion order of elements.
+    - The performance of LinkedHashSet is between HashSet and TreeSet.
+    - LinkedHashSet also allow maximum one null element.
+
+ - TreeSet
+
+    - TreeSet internally uses TreeMap to store its elements.
+    - The TreeSet maintains default natural sorting order.
+    - The TreeSet gives less performance than HashSet and LinkedHashSet.
+    - The TreeSet doesn't allow even single element.
+
+## 16. Java Map
+
+- Interface Map
+
+  - Elementos únicos (key) para cada valor (value).
+  - Implementações: HashTable, HashMap, LinkedHashMap e TreeMap
+
+  - HashMap
+
+    - Time Complexity:
+      - O(1)
+    - Iteration Order:
+      - Random
+
+  - LinkedHashMap
+    - Time Complexity:
+      - O(1)
+    - Iteration Order:
+      - sorted according to either insertion order or access order (as specified during construction).
+  - TreeMap
+
+    - Time Complexity
+      - O(log n)
+      - sorted according to either insertion order or access order (as specified during construction).
+
+  - Iteration Order:
+    - Random
+
+## 17. Java Streams
+
+- 1. Classe Anônima
+
+  - Uma classe que não recebeu nome e é declarado e instanciado em uma única instrução
+
+- 2. Functional Interface
+
+  - Qualquer interface com SAM (Single Abstract Method)
+  - As implementações são tratadas como expressões lambda
+    - Comparator
+    - Consumer
+    - Function
+    - Predicate
+
+- 3. Lambda
+
+  - Uma função sem declaração.
+  - Em uma função lambda não é necessário colocar um nome, o tipo de retorno e o modificador de acesso.
+
+- 4. Reference Method
+
+  - Novo recurso do Java 8 que permite fazer referência a um método ou construtor de uma classe de forma funcional.
+
+- 5. Streams API
+  - Nova opção para a manipulação de coleções seguindo os princípios da programação funcional.
+
+### Review
+
+- Interfaces que estendem diretamente da interface Collection:
+
+  - List, Set e Queue
+
+- Map
+
+  - é possível ordernar um map pelo valor
+
+- Principal característica da interface List
+
+  - permite adicionar elementos duplicados e garante a ordem de inserção.
+
+- método map()
+
+  - permite converter cada elemento de uma coleção em um outro objeto conforme definição
+
+- Map.put()
+  - permite atualizar adicionar e atualizar um elemento em um Map
