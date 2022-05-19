@@ -25,3 +25,45 @@ Testando exceções:
   - fail dentro do block try
 
 -assertThat -> matchers
+
+### Review
+
+Como são chamados os pequenos passos do desenvolvimento no TDD?
+
+- babysteps
+
+AssertEquals verifica se:
+
+- o valor esperado e atual são iguais.
+
+O que é TDD?
+
+- uma método de desenvolvimento de software.
+
+Testes unitários são usados para:
+
+- Testar uma única funcionalidade da aplicação.
+
+Qual das afirmações abaixo sobre razões para usar mocks é verdadeira?
+
+- criar/simular objetos reais para testes é difícil.
+
+Qual afirmativa sobre rules é verdadeira:
+
+- podemos criar arquivos e diretórios que serão deletados após o método ser executado.
+
+Por que o TDD proporciona um código mais limpo?
+
+- por favorecer a criação de códigos menores e testáveis.
+
+Quais abordagens são utilizadas para testar exceptions?
+
+- expected exceptions, expected exceptions rules e try/catch idiom.
+
+PowerMockit é uma API de extensão que permite trabalhar com:
+
+- reflection
+
+Qual das afirmações abaixo é verdadeira sobre limitações no uso de mocks?
+
+- Tipos primitivos, objetos e arrays.
