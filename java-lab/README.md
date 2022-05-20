@@ -184,7 +184,6 @@ erro de lógica no código acima.
 - [ ] https://www.oracle.com/br/technical-resources/articles/java-stream-api.html
 - [ ] https://www.alura.com.br/artigos/streams-e-datas-para-os-desafios-do-dia-a-dia-no-java-8?gclid=CjwKCAjw7IeUBhBbEiwADhiEMTRQX8EtDdI8S_obDlxsqzYdw89xz5g5AQnK__tjDjK7wv8iZjNYshoCI5MQAvD_BwE
 
-
 ## 13. Collection
 
 - Collection é um objeto que agrupa múltiplos elementos dentro de uma unidade e serve para armazenar e processar conjunto de dados de forma eficiente.
@@ -245,12 +244,12 @@ erro de lógica no código acima.
     - The performance of LinkedHashSet is between HashSet and TreeSet.
     - LinkedHashSet also allow maximum one null element.
 
- - TreeSet
+- TreeSet
 
-    - TreeSet internally uses TreeMap to store its elements.
-    - The TreeSet maintains default natural sorting order.
-    - The TreeSet gives less performance than HashSet and LinkedHashSet.
-    - The TreeSet doesn't allow even single element.
+  - TreeSet internally uses TreeMap to store its elements.
+  - The TreeSet maintains default natural sorting order.
+  - The TreeSet gives less performance than HashSet and LinkedHashSet.
+  - The TreeSet doesn't allow even single element.
 
 ## 16. Java Map
 
@@ -327,3 +326,17 @@ erro de lógica no código acima.
 
 - Map.put()
   - permite atualizar adicionar e atualizar um elemento em um Map
+
+## 18. OOP.
+
+**1. Enpsulamento**
+
+- encapusular significa criar interfaces de uso que abstraem a implementação dos objetos.
+
+**2. Herança**
+
+- permite a reutilização de código ou ainda modificar o comportamento de uma implementação.
+
+**3. Polimorfismo**
+
+- é capacidade de um objeto poder ser referenciado de várias formas.
