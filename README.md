@@ -1,3 +1,3 @@
 # CS Programming Lab
 
-This repository is a lab for practicing programming.
+This repository is a lab to practice programming.
