@@ -13,3 +13,9 @@ A história da computação está dividida em quatro períodos.
 - Ainda com dimensões muito grandes, mas funcionavam por meio de transistores que substituíram as válvulas.
 
 - Início do uso comercial (IBM 1401)
+
+## Terceira Geração de Computadores (1965-1975)
+
+- Funcionavam por meio de circuito integrados, que substituíramm os transistores e já possuiam uma dimensão menor e maior capacidade de processamento.
+
+- Nesse período ocorre a criação dos chips e a utilização dos computadores pessoais.
