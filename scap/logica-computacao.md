@@ -30,4 +30,4 @@ A lógica está diretamente relacionada tanto com a construção de softwares co
 
 ** - Pergunta: a lógica algébrica é a mesma coisa que 'programação'?**
 
-\*\*1. Não foi o surgimento pois existe um histórico antes de George Boole e Augustus de Morgan. O tear de Jacquard, a máquina analítica e outros feitos já aplicavam o conceito de 'programação'.
+**1. Não foi o surgimento pois existe um histórico antes de George Boole e Augustus de Morgan. O tear de Jacquard, a máquina analítica e outros feitos já aplicavam o conceito de 'programação'.**
